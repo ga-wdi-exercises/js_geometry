@@ -2,6 +2,15 @@ function Rectangle(length, width) {
   this.length = length;
   this.width = width;
 }
+Rectangle.prototype.isSquare = function() {
+
+};
+Rectangle.prototype.area = function() {
+
+};
+Rectangle.prototype.perimeter = function() {
+
+};
 
 
 function Triangle(sideA, sideB, sideC) {
