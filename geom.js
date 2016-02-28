@@ -53,5 +53,8 @@ function LineSegment(x1, y1, x2, y2) {
   this.y2 = y2;
 }
 LineSegment.prototype.length = function() {
-  return 
+  //sqrt of dx^2 + dy^2 where dx is distance between x's and dy is distance between y's
+  var dx = this.x1 - this.x2;
+  var dy = this.y1 - this.y2;
+  return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
 }
