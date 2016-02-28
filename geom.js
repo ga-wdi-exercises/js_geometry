@@ -58,3 +58,6 @@ LineSegment.prototype.length = function() {
   var dy = this.y1 - this.y2;
   return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
 }
+lOne = new LineSegment(15, 20, 35, 5);
+lTwo = new LineSegment(2, 2, 4, 8);
+lThree = new LineSegment(2, 3, 10, 20);
