@@ -31,3 +31,50 @@ Rectangle.prototype.area = function(){
 Rectangle.prototype.perimeter = function(){
     return (2*(this.length + this.width));
 };
+
+Triangle.prototype.isEquilateral = function(){
+    if(sideA === sideB === sideC){
+        return true;
+    }
+};
+
+Triangle.prototype.isIsosceles = function(){
+    if(sideA === sideB || sideA === sideC || sideB === sideC){
+        return true;
+    }else{
+        return false;
+    }
+};
+
+Triangle.prototype.area = function(){
+    answer = (((Math.sqrt(3))/4) * (this.sideA *this.sideA));
+};
+
+Triangle.prototype.isObtuse = function(){
+    var a = this.sideA; var b = this.sideB; var c = this.sideC;
+    var topOfEquation;
+    var bottomOfEquation;
+    var final;
+    if(Math.max(a,b,c) === c){
+        topOfEquation = ((Math.pow(a, 2)) +  (Math.pow(b, 2)) -  (Math.pow(c, 2)));
+        bottomOfEquation = (2 * (a * b));
+        var cosC = (topOfEquation / bottomOfEquation);
+        final = (cos(-1) * (cosC));
+    }else if(Math.max(a,b,c) === b){
+        topOfEquation = ((Math.pow(a, 2)) +  (Math.pow(c, 2)) -  (Math.pow(b, 2)));
+        bottomOfEquation = (2 * (a * c));
+        var cosB = (topOfEquation / bottomOfEquation);
+        final = (cos(-1) * (cosB));
+    }else{
+        topOfEquation = ((Math.pow(b, 2)) +  (Math.pow(c, 2)) -  (Math.pow(a, 2)));
+        bottomOfEquation = (2 * (b * c));
+        var cosA = (topOfEquation / bottomOfEquation);
+        final = (cos(-1) * (cosA));
+    }
+
+    if(final > 90){
+        return true;
+    }else{
+        return false;
+    }
+};
