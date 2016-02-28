@@ -52,14 +52,14 @@ Triangle.prototype.area = function(){
 };
 
 Triangle.prototype.isObtuse = function(){
-  var cosA = (Math.pow(-this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideB*this.sideC);
-  var cosB = (Math.pow(this.sideA,2) - Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideA*this.sideC);
-  var cosC = (Math.pow(this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideA*this.sideB);
-  if (cosA < 0 || cosB < 0 || cosC < 0){
-    return true;
-  }else{
-    return false;
-  }
+  // var cosA = (Math.pow(-this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideB*this.sideC);
+  // var cosB = (Math.pow(this.sideA,2) - Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideA*this.sideC);
+  // var cosC = (Math.pow(this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideA*this.sideB);
+  // if (cosA < 0 || cosB < 0 || cosC < 0){
+  //   return true;
+  // }else{
+  //   return false;
+  // }
 };
 
 //   if((Math.pow(this.sideA,2) + this.sideB^2 < this.sideC^2) || (Math.pow(this.sideB,2) + this.sideC^2 < this.sideA^2) || (Math.pow(this.sideC,2) + this.sideA^2 < this.sideB^2)){
@@ -75,15 +75,6 @@ Triangle.prototype.isObtuse = function(){
 
 // var obtuseTri = new Triangle(2,2,18);
 
-$("h2").on("click",function(){
-  console.log($(this).html())
-}
-);
-
-$("h2").click(function(){
-  alert(this.innerHTML);
-}
-);
 
 function LineSegment(x1, y1, x2, y2) {
   this.x1 = x1;
@@ -91,3 +82,10 @@ function LineSegment(x1, y1, x2, y2) {
   this.x2 = x2;
   this.y2 = y2;
 }
+
+LineSegment.prototype.length = function(){
+  var oneLine = (Math.pow(this.x2 - this.x1,2));
+  var twoLine = (Math.pow(this.y2 - this.y1,2));
+  return Math.sqrt(oneLine + twoLine);
+  // return Math.sqrt((Math.pow(this.x2 - this.x1),2) + (Math.pow(this.y2 - this.y1),2));
+};
