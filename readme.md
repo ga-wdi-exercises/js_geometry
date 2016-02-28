@@ -17,7 +17,9 @@ Augment its prototype with the following methods:
 * `area` - calculates the area of the rectangle.
 * `perimeter` - calculates the perimeter of the rectangle.
 
-Create a few rectangles with different lengths and widths, and then test your outcomes using Jasmine!
+Create a few rectangles with different lengths and widths.
+
+Bonus: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
 
 
 ## Triangle
@@ -39,7 +41,9 @@ Augment its prototype with the following methods:
 * `area` - calculates the [area of the Triangle](http://en.wikipedia.org/wiki/Heron%27s_formula).
 * `isObtuse` - returns true [if the triangle is obtuse](http://en.wikipedia.org/wiki/Isosceles_triangle#By_internal_angles).
 
-Create a few rectangles with different lengths and widths, and then test your outcomes using Jasmine!
+Create a few rectangles with different lengths and widths.
+
+Bonus: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
 
 
 ## LineSegment
