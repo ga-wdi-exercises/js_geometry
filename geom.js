@@ -3,6 +3,23 @@ function Rectangle(length, width) {
   this.width = width;
 }
 
+Rectangle.prototype.isSquare = function() {
+    if (this.length == this.width) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+Rectangle.prototype.area = function() {
+    return (this.length*this.width);
+};
+Rectangle.prototype.perimeter = function() {
+    return (this.length*2 + this.width*2);
+};
+var box1 = new Rectangle(3, 8);
+var box2 = new Rectangle(5, 2);
+var box3 = new Rectangle(9, 4);
 
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
