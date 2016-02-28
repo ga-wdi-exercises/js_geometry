@@ -21,11 +21,59 @@ Rectangle.prototype.perimeter = function(){
 
 // var skinnyBox = new Rectangle(18,2);
 
+// var squareBox = new Rectangle(8,8);
+
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
   this.sideB = sideB;
   this.sideC = sideC;
 }
+
+Triangle.prototype.isEquilateral = function(){
+  if (this.sideA == this.sideB && this.sideB == this.sideC){
+    return true;
+  }else{
+    return false;
+  }
+};
+
+Triangle.prototype.isIsosceles = function(){
+  if ((this.sideA == this.sideB) || (this.sideA == this.sideB) || (this.sideB == this.sideC)){
+    return true;
+  }else{
+    return false;
+  }
+};
+
+Triangle.prototype.area = function(){
+  var s = (this.sideA + this.sideB + this.sideC) / 2;
+  var area = Math.sqrt(s*(s-this.sideA)(s-this.sideB)(s-this.sideC));
+  return area;
+};
+
+Triangle.prototype.isObtuse = function(){
+  var cosA = (Math.pow(-this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideB*this.sideC);
+  var cosB = (Math.pow(this.sideA,2) - Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideA*this.sideC);
+  var cosC = (Math.pow(this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) / (2*this.sideA*this.sideB);
+  if (cosA < 0 || cosB < 0 || cosC < 0){
+    return true;
+  }else{
+    return false;
+  }
+};
+
+//   if((Math.pow(this.sideA,2) + this.sideB^2 < this.sideC^2) || (Math.pow(this.sideB,2) + this.sideC^2 < this.sideA^2) || (Math.pow(this.sideC,2) + this.sideA^2 < this.sideB^2)){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// };
+
+// var equalTri = new Triangle(8,8,8);
+
+// var isocTri = new Triangle(8,8,20);
+
+// var obtuseTri = new Triangle(2,2,18);
 
 $("h2").on("click",function(){
   console.log($(this).html())
