@@ -50,6 +50,7 @@ Triangle.prototype.area = function(){
     answer = (((Math.sqrt(3))/4) * (this.sideA *this.sideA));
 };
 
+// Used formula from here: http://www.teacherschoice.com.au/maths_library/trigonometry/solve_trig_sss.htm
 Triangle.prototype.isObtuse = function(){
     var a = this.sideA; var b = this.sideB; var c = this.sideC;
     var topOfEquation;
@@ -77,4 +78,12 @@ Triangle.prototype.isObtuse = function(){
     }else{
         return false;
     }
+};
+
+LineSegment.prototype.length = function(){
+    var partX = Math.pow((this.x2 - this.x1), 2);
+    var partY =Math.pow((this.y2 - this.y1), 2) ;
+    var addThem = partX + partY;
+    var answer = Math.sqrt(addThem);
+    return answer;
 };
