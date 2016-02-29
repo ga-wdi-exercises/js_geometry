@@ -1,4 +1,4 @@
-var rect1 = new Rectangle(3,3);
+var rect1 = new Rectangle(3.5,3.5);
 var rect2 = new Rectangle(4,3);
 var rect3 = new Rectangle(3,5);
 
@@ -22,12 +22,42 @@ Rectangle.prototype.perimeter = function() {
   return lengthSum + widthSum;
 };
 
+var tri1 = new Triangle(3,3,3);
+var tri2 = new Triangle(1,2,3);
+var tri3 = new Triangle(3,3,1);
+var tri4 = new Triangle(1,3,3);
+var tri5 = new Triangle(1,3,1);
 
 function Triangle(sideA, sideB, sideC) {
-  this.sideA = sideA;
-  this.sideB = sideB;
-  this.sideC = sideC;
+  this.sideA = parseFloat(sideA);
+  this.sideB = parseFloat(sideB);
+  this.sideC = parseFloat(sideC);
 }
+Triangle.prototype.isEquilateral = function() {
+  if (this.sideA === this.sideB && this.sideA === this.sideC) {
+    return true;
+  } else {
+    return false;
+  }
+};
+//I am basing isosceles definition on argument that it has ONLY two equal sides, not at least 2 equal sides (thus excluding equilateral triangles)
+Triangle.prototype.isIsosceles = function() {
+  if (this.sideA === this.sideB && this.sideA != this.sideC) {
+    return true;
+  } else if (this.sideB === this.sideC && this.sideB != this.sideA) {
+    return true;
+  } else if (this.sideC === this.sideA && this.sideC != this.sideB) {
+    return true;
+  } else {
+    return false;
+  }
+};
+Triangle.prototype.area = function() {
+
+};
+Triangle.prototype.isObtuse = function() {
+
+};
 
 
 function LineSegment(x1, y1, x2, y2) {
