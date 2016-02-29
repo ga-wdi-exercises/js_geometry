@@ -11,7 +11,15 @@ Rectangle.prototype.isSquare = function() {
   }
 };
 
+Rectangle.prototype.area = function() {
+  return this.length * this.width;
+};
 
+Rectangle.prototype.perimeter = function() {
+  return (2 * this.length) + (2 * this.width);
+};
+
+var rectangle = new Rectangle(5, 8);
 
 
 function Triangle(sideA, sideB, sideC) {
