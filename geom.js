@@ -62,9 +62,10 @@ Triangle.prototype.area = function() {
   return getArea;
 };
 Triangle.prototype.isObtuse = function() {
-
+//if I finish other homework assignments in a timely fashion, I will return to this.
 };
 
+var line1 = new LineSegment(2, 4, 1, 3);
 
 function LineSegment(x1, y1, x2, y2) {
   this.x1 = x1;
@@ -72,3 +73,11 @@ function LineSegment(x1, y1, x2, y2) {
   this.x2 = x2;
   this.y2 = y2;
 }
+LineSegment.prototype.length = function() {
+  var sum1 = this.x1 + this.y1;
+  var sum2 = this.x2 + this.y2;
+  var sum1sq = sum1 * sum1;
+  var sum2sq = sum2 * sum2;
+  var pythag = Math.sqrt(sum1sq + sum2sq);
+  return pythag;
+};
