@@ -47,6 +47,7 @@ Triangle.prototype.area = function() {
     var area = Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC));
     return area;
 };
+Triangle.prototype.isObtuse = function() {
 if (
 Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2) < Math.pow(this.sideC, 2) ||
 Math.pow(this.sideB, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideA, 2) ||
