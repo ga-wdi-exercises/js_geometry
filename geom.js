@@ -29,7 +29,12 @@ Triangle.prototype = {
     return this.sideA === this.sideB || this.sideA === this.sideC || this.sideB === this.sideC
   };
   function area(){
-    return .5 * ()
+    var p = (this.sideA + this.sideB + this.sideC) / 2;
+    var area = Math.sqrt ((p - this.sideA) + (p - this.sideB) + (p - this.sideC));
+    return area;
+  };
+  function isObtuse(){
+    
   }
 }
 
