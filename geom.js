@@ -53,7 +53,13 @@ Triangle.prototype.isIsosceles = function() {
   }
 };
 Triangle.prototype.area = function() {
-
+  var perimeter = this.sideA + this.sideB + this.sideC;
+  var semiPerim = perimeter/2;
+  //return semiPerim;
+  var multiply = semiPerim * (semiPerim - this.sideA) * (semiPerim - this.sideB) * (semiPerim - this.sideC);
+  //return multiply;
+  var getArea = Math.sqrt(multiply);
+  return getArea;
 };
 Triangle.prototype.isObtuse = function() {
 
