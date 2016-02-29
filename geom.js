@@ -20,6 +20,8 @@ Rectangle.prototype.perimeter = function() {
 };
 
 var rectangle = new Rectangle(5, 8);
+var rectangle2 = new Rectangle(10, 10);
+var rectangle3 = new Rectangle(6, 55);
 
 
 function Triangle(sideA, sideB, sideC) {
@@ -27,6 +29,18 @@ function Triangle(sideA, sideB, sideC) {
   this.sideB = sideB;
   this.sideC = sideC;
 }
+
+Triangle.prototype.isEquilateral = function() {
+  if (this.sideA === this.sideB && this.sideB === this.sideC) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+var triangle1 = new Triangle(5, 5, 5);
+var triangle2 = new Triangle(3, 4, 5);
+var triangle3 = new Triangle(7, 33, 20);
 
 
 function LineSegment(x1, y1, x2, y2) {
