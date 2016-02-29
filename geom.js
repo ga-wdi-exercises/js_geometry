@@ -27,6 +27,40 @@ function Triangle(sideA, sideB, sideC) {
   this.sideC = sideC;
 }
 
+Triangle.prototype.isEquilateral = function() {
+    if (this.sideA == this.sideB && this.sideB == this.sideC) {
+        return true;
+    } else {
+        return false;
+    }
+};
+Triangle.prototype.isIsosceles = function() {
+    if (this.sideA == this.sideB || this.sideB == this.sideC || this.sideC == this.sideA) {
+        return true;
+    } else {
+        return false;
+    }
+};
+Triangle.prototype.area = function() {
+
+    var s = ((this.sideA + this.sideB + this.sideC)/2);
+    var area = Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC));
+    return area;
+};
+if (
+Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2) < Math.pow(this.sideC, 2) ||
+Math.pow(this.sideB, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideA, 2) ||
+Math.pow(this.sideC, 2) + Math.pow(this.sideA, 2) < Math.pow(this.sideB, 2)
+) {
+    return true;
+} else {
+    return false;
+}
+};
+
+var tri1 = new Triangle(8, 4, 3);
+var tri2 = new Triangle(7, 1, 6);
+var tri3 = new Triangle(5, 2, 9);
 
 function LineSegment(x1, y1, x2, y2) {
   this.x1 = x1;
