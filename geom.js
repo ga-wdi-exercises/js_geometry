@@ -34,8 +34,8 @@ Triangle.prototype = {
     return area;
   };
   function isObtuse(){
-    
-  }
+
+  };
 }
 
 function LineSegment(x1, y1, x2, y2) {
@@ -44,3 +44,8 @@ function LineSegment(x1, y1, x2, y2) {
   this.x2 = x2;
   this.y2 = y2;
 }
+LineSegment.prototype = {
+  var a = (this.x1 - this.y1);
+  var b = (this.x2 - this.y2);
+  return Math.sqrt(a * a + b * b);
+};
