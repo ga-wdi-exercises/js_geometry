@@ -4,7 +4,7 @@ function Rectangle(length, width) {
 }
 
 Rectangle.prototype.isSquare = function() {
-   console.log(this.length === this.width);
+   return this.length === this.width;
 };
 
 Rectangle.prototype.area = function() {
@@ -22,7 +22,7 @@ function Triangle(sideA, sideB, sideC) {
 }
 
 Triangle.prototype.isEquilateral = function() {
-  return this.sideA === this.sideB === this.sideC;
+  return this.sideA === this.sideB && this.sideA === this.sideC && this.sideB ===this.sideC;
 };
 
 Triangle.prototype.isIsosceles = function() {
