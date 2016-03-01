@@ -1,7 +1,6 @@
 var rects = [new Rectangle(2,9), new Rectangle(300,550), new Rectangle(60,60)];
 var tris = [new Triangle(6,6,6), new Triangle(300,550,610), new Triangle(12,10,3)];
-
-
+var segs = [new LineSegment(2,6,9,8), new LineSegment(300,560,500,610), new LineSegment(12,10,6,3)];
 
 function Rectangle(length, width) {
   this.length = length;
@@ -52,4 +51,8 @@ function LineSegment(x1, y1, x2, y2) {
   this.y1 = y1;
   this.x2 = x2;
   this.y2 = y2;
+}
+
+LineSegment.prototype.length = function(){
+  return Math.sqrt((this.x1 -= this.x2) * this.x1 + (this.y1 -= this.y2) * this.y1);
 }
