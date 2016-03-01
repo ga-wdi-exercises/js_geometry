@@ -25,14 +25,36 @@ return(this.length === this.width);
 
 //TRIANGLE
 
-function Triangle(sideA, sideB, sideC) {
+function Triangle(sideA, sideB, sideC){
   this.sideA = sideA;
   this.sideB = sideB;
   this.sideC = sideC;
 }
+var test1 = new Triangle(2, 2, 3);
+
+// isEquilateral
+Triangle.prototype.isEquilateral = function(){
+  return(this.sideA === this.sideB && this.sideA=== this.sideC && this.sideB === this.sideC);
+};
+
+// //isIsosceles
+Triangle.prototype.isIsosceles = function(){
+  return(this.sideA === this.sideB && this.sideA !== this.sideC && this.sideB !== this.sideC);
+};
+
+function Triangle(sidA, sidB, base, hite){
+  this.sidA = sidA;
+  this.sidB = sidB;
+  this.base = base;
+  this.hite = hite;
+}
+var test2 = new Triangle(2, 2, 5, 2);
+//area
+Triangle.prototype.area = function(){
+return((this.base * this.hite)/2);
+};
 
 
-var test1 = new Triangle(2, 3, 4);
 
 
 function LineSegment(x1, y1, x2, y2) {
