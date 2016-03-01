@@ -34,6 +34,49 @@ function Triangle(sideA, sideB, sideC) {
   this.sideC = sideC;
 }
 
+//`isEquilateral` - returns true [if the triangle is equilateral
+Triangle.prototype.isEquilateral = function(){
+  if((this.sideA == this.sideB) && (this.sideA == this.sideC)){
+    return true;
+  }
+  else{
+    return false;
+  }
+};
+
+//`isIsosceles` - return true [if the triangle is isosceles]
+Triangle.prototype.isIsosceles = function(){
+  if((this.sideA == this.sideB) || (this.sideA == this.sideC) || (this.sideB == this.sideC)){
+    return true;
+  }
+  else{
+    return false;
+  }
+};
+
+//`area` - calculates the [area of the Triangle]
+Triangle.prototype.area = function(){
+  var height = 2*(this.sideA/this.sideB);
+  return (height * this.sideB)/2;
+};
+
+//`isObtuse` - returns true [if the triangle is obtuse]
+Triangle.prototype.isObtuse = function(){
+  //if the triangle's angle is greater than 90
+   //cosC=(a^2+b^2-c^2)/(2ab)
+   var ans =
+   Math.abs(((this.sideA * this.sideA) + (this.sideB * this.sideB) - (this.sideC * this.sideC)) / (2 * this.sideA * this.sideB));
+  var newAns = Math.acos(ans * (180/Math.PI));
+  if(newAns >= 90){
+    return true;
+  }
+  else{
+    return false;
+  }
+};
+
+var tri = new Triangle(2, 2, 2);
+var bigTri = new Triangle(4, 5, 10);
 
 //LINE SEGEMENT
 function LineSegment(x1, y1, x2, y2) {
