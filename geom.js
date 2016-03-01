@@ -3,6 +3,11 @@ function Rectangle(length, width) {
   this.width = width;
 }
 
+Rectangle.prototype.isSquare = function(length, width) {
+  if (this.length === this.width) {
+    return true;
+  }
+}
 
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
