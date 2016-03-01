@@ -25,33 +25,47 @@ return(this.length === this.width);
 
 //TRIANGLE
 
-function Triangle(sideA, sideB, sideC){
+function Triangle1(sideA, sideB, sideC){
   this.sideA = sideA;
   this.sideB = sideB;
   this.sideC = sideC;
 }
-var test1 = new Triangle(2, 2, 3);
+var test1 = new Triangle1(2, 2, 3);
 
 // isEquilateral
-Triangle.prototype.isEquilateral = function(){
+Triangle1.prototype.isEquilateral = function(){
   return(this.sideA === this.sideB && this.sideA=== this.sideC && this.sideB === this.sideC);
 };
 
 // //isIsosceles
-Triangle.prototype.isIsosceles = function(){
+Triangle1.prototype.isIsosceles = function(){
   return(this.sideA === this.sideB && this.sideA !== this.sideC && this.sideB !== this.sideC);
 };
 
-function Triangle(sidA, sidB, base, hite){
+//area
+
+function Triangle2(sidA, sidB, base, hite){
   this.sidA = sidA;
   this.sidB = sidB;
   this.base = base;
   this.hite = hite;
 }
-var test2 = new Triangle(2, 2, 5, 2);
-//area
-Triangle.prototype.area = function(){
+var test2 = new Triangle2(3, 2, 5, 2);
+Triangle2.prototype.area = function(){
 return((this.base * this.hite)/2);
+};
+
+//isObtuse
+
+function Triangle3(angleA, angleB, angleC) {
+  this.angleA = angleA;
+  this.angleB = angleB;
+  this.angleC = angleC;
+}
+var test3 = new Triangle3(100, 40, 40);
+
+Triangle3.prototype.obtuse = function(){
+return (this.angleA > 90 || this.angleB > 90 || this.angleC > 90);
 };
 
 
