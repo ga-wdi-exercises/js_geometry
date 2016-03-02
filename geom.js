@@ -3,12 +3,62 @@ function Rectangle(length, width) {
   this.width = width;
 }
 
+Rectangle.prototype.isSquare = function(){
+  if(this.length == this.width) {
+  return true;
+  }
+  else {
+  return false;
+  }
+};
+
+Rectangle.prototype.area = function() {
+  return this.length * this.width;
+};
+
+Rectangle.prototype.perimeter = function() {
+  return this.length * 2 + this.width *2;
+};
+
 
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
   this.sideB = sideB;
   this.sideC = sideC;
 }
+
+Triangle.prototype.isEquilateral = function() {
+  if(this.sideA == this.sideB && this.sideA == this.sideC){
+    return true;
+  }
+  else {
+    return flase;
+  };
+}
+
+Triangle.prototype.isIsosceles = function() {
+  if((this.sideA == this.sideB) && (this.sideA !== this.sideC) || (this.sideB == this.sideC) && (this.sideB == this.sideA) || (this.sideC == this.sideB) && (this.sideC !== this.sideA)){
+    return true;
+  }
+  else {
+    return false;
+  }
+};
+
+Triangle.prototype.area = function() {
+  var s = (this.sideA + this.sideB + this.sideC) / 2;
+  return Math.sqrt(s * ((s-this.sideA)+(s-this.sideB)+(s-this.sideC));
+};
+
+Triangle.prototype.obtuse = function() {
+  var sides = [this.sideA, this.sideB, this.sideC];
+  sides.sort();
+ if (Math.pow(side[0],2) + Math.pow(sides[1],2)) < Math.pow(sides[2],2)){
+   return true;
+ } else {
+   return false;
+ }
+ };
 
 
 function LineSegment(x1, y1, x2, y2) {
@@ -17,3 +67,10 @@ function LineSegment(x1, y1, x2, y2) {
   this.x2 = x2;
   this.y2 = y2;
 }
+
+LineSegment.prototype.length = function() {
+
+  var x = this.x1 - this.x2;
+  var y = this.y1 - this.y2;
+  return Math.sqrt((x * x) + (y * y));
+};
