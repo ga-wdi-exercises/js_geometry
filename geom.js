@@ -31,7 +31,7 @@ function Triangle(sideA, sideB, sideC) {
   this.sideC = sideC;
 }
 
-Triangle.prototype.isEquilateral = function (){
+Triangle.prototype.isEquilateral = function (this.sideA,  this.sideB, this.sideC){
   if (this.sideA == this.sideB) && (this.sideB == this.sideC){
     return true
   }
@@ -39,6 +39,26 @@ Triangle.prototype.isEquilateral = function (){
     return false
   }
 }
+
+Triangle.prototype.isosceles = function (this.sideA,  this.sideB, this.sideC){
+  if (this.sideA == this.sideB){
+    return true
+  }
+  else if (this.sideB == this.sideC) {
+    return true
+  }
+  else if (this.sideA == this.sideC) {
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+Triangle.prototype.area = function (this.sideA,  this.sideB, this.sideC){
+  return (this.sideA*this.sideB*this.sideC)
+}
+
 
 
 
