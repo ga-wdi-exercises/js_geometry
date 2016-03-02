@@ -21,6 +21,8 @@ function LineSegment(x1, y1, x2, y2) {
 Rectangle.prototype.isSquare = function(){
     if(this.length === this.width){
         return true;
+    }else{
+        return false;
     }
 };
 
@@ -33,13 +35,15 @@ Rectangle.prototype.perimeter = function(){
 };
 
 Triangle.prototype.isEquilateral = function(){
-    if(sideA === sideB === sideC){
+    if(this.sideA === this.sideB && this.sideA === this.sideC && this.sideB === this.sideC){
         return true;
+    }else{
+        return false;
     }
 };
 
 Triangle.prototype.isIsosceles = function(){
-    if(sideA === sideB || sideA === sideC || sideB === sideC){
+    if(this.sideA === this.sideB || this.sideA === this.sideC || this.sideB === this.sideC){
         return true;
     }else{
         return false;
@@ -60,19 +64,20 @@ Triangle.prototype.isObtuse = function(){
         topOfEquation = ((Math.pow(a, 2)) +  (Math.pow(b, 2)) -  (Math.pow(c, 2)));
         bottomOfEquation = (2 * (a * b));
         var cosC = (topOfEquation / bottomOfEquation);
-        final = (cos(-1) * (cosC));
+        console.log(cosC);
+        final = (Math.acos(cosC));
     }else if(Math.max(a,b,c) === b){
         topOfEquation = ((Math.pow(a, 2)) +  (Math.pow(c, 2)) -  (Math.pow(b, 2)));
         bottomOfEquation = (2 * (a * c));
         var cosB = (topOfEquation / bottomOfEquation);
-        final = (cos(-1) * (cosB));
+        final = (Math.cos(-1) * (cosB));
     }else{
         topOfEquation = ((Math.pow(b, 2)) +  (Math.pow(c, 2)) -  (Math.pow(a, 2)));
         bottomOfEquation = (2 * (b * c));
         var cosA = (topOfEquation / bottomOfEquation);
-        final = (cos(-1) * (cosA));
+        final = (Math.cos(-1) * (cosA));
     }
-
+    console.log(final)
     if(final > 90){
         return true;
     }else{
@@ -87,3 +92,9 @@ LineSegment.prototype.length = function(){
     var answer = Math.sqrt(addThem);
     return answer;
 };
+
+var amyRectangle = new Rectangle(10,10);
+var bobRectangle = new Rectangle(5, 10);
+var samTriangle = new Triangle(10,10,10);
+var camTriangle = new Triangle(5,5,10);
+var danTriangle = new Triangle(2,3,4);
