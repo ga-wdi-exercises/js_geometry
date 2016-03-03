@@ -55,8 +55,13 @@ Triangle.prototype.isosceles = function (this.sideA,  this.sideB, this.sideC){
   }
 }
 
+
 Triangle.prototype.area = function (this.sideA,  this.sideB, this.sideC){
-  return (this.sideA*this.sideB*this.sideC)
+  returm (this.sideA*this.sideB*this.sideC)
+}
+
+Triangle.prototype.obtuse = function(this.sideA,  this.sideB, this.sideC){
+  // read up and use pythagoras theorem to solve
 }
 
 
@@ -67,4 +72,8 @@ function LineSegment(x1, y1, x2, y2) {
   this.y1 = y1;
   this.x2 = x2;
   this.y2 = y2;
+}
+
+LineSegment.prototype.length = fucntion ((x1,y1),(x2,y2)){
+  // read up line segment and use method(slope?) to derive function
 }
