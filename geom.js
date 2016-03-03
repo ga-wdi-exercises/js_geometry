@@ -3,25 +3,44 @@ function Rectangle(length, width) {
   this.width = width;
 }
 
-Rectangle.prototype.isSquare = "";
+Rectangle.prototype = {
+isSquare: function(){
+  return this.length == this.width;
+},
 //returns true if the rectangle is a square.
-Rectangle.prototype.area = "":
+area: function(){
+  return this.length * this.width;
+},
 // calculates the area of the rectangle.
-Rectangle.prototype.perimeter = "";
+perimeter: function(){
+  return(this.length + this.width)*2;
+}
 // calculates the perimeter of the rectangle.
-
+};
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
   this.sideB = sideB;
   this.sideC = sideC;
 }
-Triangle.prototype.isEquilateral = ""
+Triangle.prototype = {
+  isEquilateral: function{
+    return this.sideA === this.sideB && this.sideB === this.sideC;
+  },
 // isEquilateral - returns true if the triangle is equilateral.
-Triangle.prototype.isIsosceles = ""
+isIsosceles: function {
+  return this.sideA === this.sideB || this.sideB === this.sideC || this.sideC === this.sideA;
+},
 // isIsosceles - return true if the triangle is isosceles.
-Triangle.prototype.area = ""
+area: function{
+  var semiperimeter = (this.sideA + this.sideB + this.sideC) / 2;
+  var area = Math.sqrt(s *(s-this.sideA) * (s - sideB) * (s - sideC));
+  return area;
+},
 // area - calculates the area of the Triangle.
-Triangle.prototype.isObtuse = ""
+isObtuse: function{
+
+}
+
 // isObtuse - returns true if the triangle is obtuse.
 
 function LineSegment(x1, y1, x2, y2) {
