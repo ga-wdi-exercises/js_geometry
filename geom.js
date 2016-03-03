@@ -9,7 +9,8 @@ function Rectangle(length, width) {
 // * `perimeter` - calculates the perimeter of the rectangle.
 // Create a few rectangles with different lengths and widths.
 Rectangle.prototype.isSquare = function(){
-  return this.length == this.width;
+  if(this.length == this.width)
+  return "This is a square";
 };
 Rectangle.prototype.area= function(){
   return this.length * this.width;
@@ -17,7 +18,7 @@ Rectangle.prototype.area= function(){
 Rectangle.prototype.perimeter= function(){
   return this.length * 2 + this.width * 2;
 };
-  
+
 
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
