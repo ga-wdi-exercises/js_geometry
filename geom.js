@@ -28,11 +28,20 @@ var rectangle1 = new Rectangle (4,4);
 var rectangle2 = new Rectangle (6,4)
 
 
-// function Triangle(sideA, sideB, sideC) {
-//   this.sideA = sideA;
-//   this.sideB = sideB;
-//   this.sideC = sideC;
-// }
+function Triangle(sideA, sideB, sideC) {
+  this.sideA = sideA;
+  this.sideB = sideB;
+  this.sideC = sideC;
+}
+
+Triangle.prototype.isEquilateral = function(){
+  if (this.sideA === this.sideB && this.sideB === this.sideC){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
 //
 // function LineSegment(x1, y1, x2, y2) {
