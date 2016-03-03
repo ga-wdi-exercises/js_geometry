@@ -38,10 +38,11 @@ area: function{
 },
 // area - calculates the area of the Triangle.
 isObtuse: function{
-
+// ?Pythagorean Theorem?
 }
 
 // isObtuse - returns true if the triangle is obtuse.
+}
 
 function LineSegment(x1, y1, x2, y2) {
   this.x1 = x1;
@@ -50,5 +51,12 @@ function LineSegment(x1, y1, x2, y2) {
   this.y2 = y2;
 }
 
-LineSegment.prototype.length = ""
+LineSegment.prototype = {
+  length: function(){
+    var a = this.x1 + this.x2;
+    var b = thix.y1 + this.y2;
+    return Math.sqrt(a * a)+(b * b)
+  }
+}
+
 // length – calculates the length of the (x1, y1) --> (x2, y2) line segment.
