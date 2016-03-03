@@ -43,6 +43,16 @@ Triangle.prototype.isEquilateral = function(){
   }
 }
 
+Triangle.prototype.isIsosceles = function(){
+  if (this.sideA == this.sideB || this.sideB == this.sideC || this.sideC == this.sideA){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
 //
 // function LineSegment(x1, y1, x2, y2) {
 //   this.x1 = x1;
