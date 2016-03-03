@@ -3,6 +3,7 @@ function Rectangle(length, width) {
   this.width = width;
 }
 
+// if rectangle is a square
 Rectangle.prototype.isSquare = function(){
   if (this.length === this.width){
     return true;
@@ -12,13 +13,19 @@ Rectangle.prototype.isSquare = function(){
   }
 }
 
+// area of rectangle
 Rectangle.prototype.area = function(){
   return this.length * this.width;
 }
 
+// perimeter of rectangle
 Rectangle.prototype.perimeter = function(){
   return (this.length + this.width) * 2;
 }
+
+// created two new objects
+var rectangle1 = new Rectangle (4,4);
+var rectangle2 = new Rectangle (6,4)
 
 
 // function Triangle(sideA, sideB, sideC) {
