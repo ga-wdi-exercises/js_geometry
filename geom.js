@@ -5,7 +5,7 @@ function Rectangle(length, width) {
 
 Rectangle.prototype = {
   isSquare: function(){
-    this.length===this.width{
+    if this.length === this.width{
       return ("I'm a square")
     }else if ("I'm not a square")
   }
@@ -13,9 +13,9 @@ Rectangle.prototype = {
 
 
 function Triangle(sideA, sideB, sideC) {
-  this.sideA = sideA;
-  this.sideB = sideB;
-  this.sideC = sideC;
+    this.sideA = sideA;
+    this.sideB = sideB;
+    this.sideC = sideC;
 }
 
 Triangle.prototype = {
@@ -40,7 +40,7 @@ Triangle.prototype = {
     }
   }
   area function () {
-    return ()
+    return (height * this.sideB / 2)
 
   }
 
