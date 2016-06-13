@@ -10,7 +10,7 @@ Rectangle.prototype = {
     return this.length * this.width;
   },
   perimeter: function(){
-    return (this.length * 2) + (this.width * 2)
+    return (this.length * 2) + (this.width * 2);
   }
 }
 
@@ -19,17 +19,21 @@ function Triangle(sideA, sideB, sideC) {
   this.sideB = sideB;
   this.sideC = sideC;
 }
-Triangle.prototype.isEquilateral = function(){
+Triangle.prototype = {
+  isEquilateral: function(){
+    return this.sideA === this.sideB && this.sideB === this.sideC;
+  },
+  isIsosceles: function(){
+    return this.sideA === this.sideB || this.sideA === this.sideC || this.sideB === this.sideC;
+  },
+  area: function(){
+    var s = ((this.sideA + this.sideB + this.sideC) / 2);
+    var area = Math.sqrt(s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC));
+    return area;
+  },
+  isObtuse: function(){
 
-}
-Triangle.prototype.isIsosceles = function(){
-
-}
-Triangle.prototype.area = function(){
-
-}
-Triangle.prototype.isObtuse = function(){
-
+  }
 }
 
 function LineSegment(x1, y1, x2, y2) {
