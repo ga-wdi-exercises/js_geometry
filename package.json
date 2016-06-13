@@ -1,0 +1,24 @@
+{
+  "name": "js_geometry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-expect": "^2.0.2",
+    "jasmine-node": "^1.14.5"
+  },
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnishiguchi/js_geometry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnishiguchi/js_geometry/issues"
+  },
+  "homepage": "https://github.com/mnishiguchi/js_geometry#readme"
+}

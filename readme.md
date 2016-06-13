@@ -1,28 +1,44 @@
 # Geometry
 
-## Rectangle
+## Testing with Jasmine (jasmine-node)
 
-Given the following constructor function:
+- [jasmine](http://jasmine.github.io/2.0/introduction.html)
+- [jasmine-node](https://github.com/mhevery/jasmine-node)
 
+Install the latest official version
+
+```bash
+$ npm install -g jasmine-node
 ```
-function Rectangle(length, width) {
-  this.length = length;
-  this.width = width;
-}
+
+Install dependencies
+
+```bash
+# Install jasmine-node and jasmine-expect that are specified in package.json
+$ npm install
 ```
 
-Augment its prototype with the following methods:
+Write tests
 
-* `isSquare` - returns true if the rectangle is a square.
-* `area` - calculates the area of the rectangle.
-* `perimeter` - calculates the perimeter of the rectangle.
+- 'spec/*spec.js'
 
-Create a few rectangles with different lengths and widths.
+Run tests
 
-Bonus: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
+```bash
+npm run test # jasmine-node spec
+```
 
+or
 
-## Triangle
+```bash
+jasmine-node spec
+```
+
+---
+
+## TODO
+
+#### Triangle
 
 Given the following constructor function:
 
@@ -46,7 +62,7 @@ Create a few rectangles with different lengths and widths.
 Bonus: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
 
 
-## LineSegment
+#### LineSegment
 
 Given the following constructor:
 
