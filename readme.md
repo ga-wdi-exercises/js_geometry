@@ -1,37 +1,36 @@
 # Geometry
 
-## Testing with Jasmine (jasmine-node)
+## Testing with Mocha
 
-- [jasmine](http://jasmine.github.io/2.0/introduction.html)
-- [jasmine-node](https://github.com/mhevery/jasmine-node)
+- [Mocha](https://mochajs.org/)
+- [Chai BDD](http://chaijs.com/api/bdd/)
 
-Install the latest official version
+Install the latest official version of Mocha
 
 ```bash
-$ npm install -g jasmine-node
+$ npm install -g mocha
 ```
 
 Install dependencies
 
 ```bash
-# Install jasmine-node and jasmine-expect that are specified in package.json
-$ npm install
+$ npm install mocha chai --save-dev
 ```
 
 Write tests
 
-- 'spec/*spec.js'
+- 'test/*.js'
 
 Run tests
 
 ```bash
-npm run test # jasmine-node spec
+mocha
 ```
 
 or
 
 ```bash
-jasmine-node spec
+npm run test
 ```
 
 ---
