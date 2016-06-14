@@ -45,7 +45,7 @@ function LineSegment(x1, y1, x2, y2) {
   this.y2 = y2;
 }
 LineSegment.prototype.length = function(){
-  var point1 = this.x2 - this.x1;
-  var point2 = this.y2 - this.y1;
-  return Math.sqrt(point1 * point1 + point2 * point2)
+  var a = this.x2 - this.x1;
+  var b = this.y2 - this.y1;
+  return Math.sqrt(a * a + b * b)
 }
