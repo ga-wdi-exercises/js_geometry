@@ -3,8 +3,8 @@ var expect = require("chai").expect;
 var Triangle = require( "../lib/triangle.js" );
 
 describe("Triangle", () => {
-  var triangle = new Triangle(1, 2, 3);
   it("has three sides", () => {
+    var triangle = new Triangle(1, 2, 3);
     expect(triangle.sideA).to.not.null;
     expect(triangle.sideB).to.not.null;
     expect(triangle.sideC).to.not.null;
@@ -30,7 +30,7 @@ describe("Triangle", () => {
 
   describe("#area", () => {
     it("returns correct area of a triangle", () => {
-      expect(new Triangle(1, 2, 3).area()).to.equal(3);
+      expect(new Triangle(4, 13, 15).area()).to.equal(24);
     });
   });
 
