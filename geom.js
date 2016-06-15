@@ -2,27 +2,27 @@ function Rectangle(length, width) {
   this.length = length;
   this.width = width;
 }
-Recatangle.prototype{
+Recatangle.prototype = {
   //  isSquare - returns true if the rectangle is a square.
   isSquare: function(){
     return this.length === this.width;
-  }
+  },
   //  area - calculates the area of the rectangle.
   area: function(){
     return this.length * this.width;
-  }
+  },
   //  perimeter - calculates the perimeter of the rectangle.
   perimeter: function(){
     return this.length + this.width + this.length + this.width;
   }
-}
+};
 
 function Triangle(sideA, sideB, sideC) {
   this.sideA = sideA;
   this.sideB = sideB;
   this.sideC = sideC;
 }
-Triangle.prototype{
+Triangle.prototype = {
   // isEquilateral - returns true if the triangle is equilateral.
   isEquilateral: function(){
     return this.SideA === this.sideB === this.sideC;
@@ -42,7 +42,7 @@ Triangle.prototype{
     return this.sideA
 
   }
-}
+};
 
 
 function LineSegment(x1, y1, x2, y2) {
