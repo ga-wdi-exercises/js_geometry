@@ -44,4 +44,8 @@ function LineSegment(x1, y1, x2, y2) {
   this.x2 = x2;
   this.y2 = y2;
 }
-// i dont understand what this is asking 
+LineSegment.prototype.length = function(){
+  var x = this.x2 - this.x1;
+  var y = this.y2 - this.y1;
+  var length = Math.sqrt(Math.pow(x)+Math.pow(y));
+}
