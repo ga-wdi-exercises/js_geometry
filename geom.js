@@ -2,9 +2,12 @@ function Rectangle(length, width) {
   this.length = length;
   this.width = width;
 }
-
-//Augment its prototype with the following methods:
-//  isSquare - returns true if the rectangle is a square.
+Recatangle.prototype{
+  //  isSquare - returns true if the rectangle is a square.
+  isSquare: function() {
+    return this.length === this.width;
+  }
+}
 //  area - calculates the area of the rectangle.
 //  perimeter - calculates the perimeter of the rectangle.
 
