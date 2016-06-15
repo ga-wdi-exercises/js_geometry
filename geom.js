@@ -54,8 +54,6 @@ Triangle.prototype = {
     //I'm not sure this is correct but in my head I don't see why not.
   }
 };
-
-
 function LineSegment(x1, y1, x2, y2) {
   this.x1 = x1;
   this.y1 = y1;
