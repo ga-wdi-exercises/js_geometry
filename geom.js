@@ -37,7 +37,7 @@ Triangle.prototype.isObtuse = function() {
   return (obtuseCheck(this.sideA,this.sideB,this.sideC) ||
           obtuseCheck(this.sideB,this.sideC,this.sideA) ||
           obtuseCheck(this.sideC,this.sideA,this.sideB)
-  );         
+  );
 }
 
 function LineSegment(x1, y1, x2, y2) {
@@ -45,4 +45,8 @@ function LineSegment(x1, y1, x2, y2) {
   this.y1 = y1;
   this.x2 = x2;
   this.y2 = y2;
+}
+
+LineSegment.prototype.length = function() {
+  return Math.sqrt(Math.pow(this.x2-this.x1,2) + Math.pow(this.y2-this.y1,2));
 }
