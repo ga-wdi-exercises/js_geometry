@@ -17,29 +17,35 @@ Recatangle.prototype = {
   }
 };
 
-function Triangle(sideA, sideB, sideC) {
-  this.sideA = sideA;
-  this.sideB = sideB;
-  this.sideC = sideC;
+function Triangle(triSideA, triSideb, triSideC) {
+  this.triSideA = triSideA;
+  this.triSideb = triSideb;
+  this.tritriSideC = triSideC;
 }
 Triangle.prototype = {
   // isEquilateral - returns true if the triangle is equilateral.
   isEquilateral: function(){
-    return this.SideA === this.sideB === this.sideC;
-  }
+    return this.triSideA === this.triSideb === this.triSideC;
+  },
   // isIsosceles - return true if the triangle is isosceles.
+    // return - isIsosceles if triSideA is equal to triSideB but not equal to triSideC.
+      //or if triSideA is equal to triSideC but not equal to triSideB.
+        //or if triSideB is equal to triSideC but not equal to triSideA.
   isIsosceles: function(){
-    return this.sideA === this.sideB
-  }
+    return
+      this.triSideA === this.triSideB
+      this.triSideA === this.triSideC
+      this.triSideB === this.triSideC
+  },
   // area - calculates the area of the Triangle.((b * h)/2)
   //Area	=	 √	 p	 (	p	−	a	) 	(	p	−	b	)	 (	p	−	c	)
   area: function(){
-    var p = (this.sideA + this.sideB + this.sideC) / 2;
-    var area = Math.sqrt(p (p - this.sideA) (p - this.sideB) (p - this.sideC))
-  }
-  //  isObtuse - returns true if the triangle is obtuse.(has a 90' angle)
+    var p = (this.triSideA + this.triSideb + this.triSideC) / 2;
+    var area = Math.sqrt(p (p - this.triSideA) (p - this.triSideb) (p - this.triSideC))
+  },
+  //  isObtuse - returns true if the triangle is obtuse.(has a =< 90' angle)
   isObtuse: function(){
-    return this.sideA
+    return this.triSideA
 
   }
 };
