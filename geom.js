@@ -31,12 +31,15 @@ Triangle.prototype{
   isIsosceles: function(){
     return this.sideA === this.sideB
   }
-  // area - calculates the area of the Triangle.
+  // area - calculates the area of the Triangle.((b * h)/2)
+  //Area	=	 √	 p	 (	p	−	a	) 	(	p	−	b	)	 (	p	−	c	)
   area: function(){
-
+    var p = (this.sideA + this.sideB + this.sideC) / 2;
+    var area = Math.sqrt(p (p - this.sideA) (p - this.sideB) (p - this.sideC))
   }
-  //  isObtuse - returns true if the triangle is obtuse.
+  //  isObtuse - returns true if the triangle is obtuse.(has a 90' angle)
   isObtuse: function(){
+    return this.sideA
 
   }
 }
