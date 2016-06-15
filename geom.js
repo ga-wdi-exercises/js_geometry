@@ -36,17 +36,22 @@ Triangle.prototype = {
       this.triSideA === this.triSideB
       this.triSideA === this.triSideC
       this.triSideB === this.triSideC
+      //need to figure out the relation.
   },
   // area - calculates the area of the Triangle.((b * h)/2)
   //Area	=	 √	 p	 (	p	−	a	) 	(	p	−	b	)	 (	p	−	c	)
   area: function(){
     var p = (this.triSideA + this.triSideb + this.triSideC) / 2;
     var area = Math.sqrt(p (p - this.triSideA) (p - this.triSideb) (p - this.triSideC))
+    return area;
   },
-  //  isObtuse - returns true if the triangle is obtuse.(has a =< 90' angle)
+  // isObtuse - returns true if the triangle is obtuse.(has a =< 90' angle)
+    // Must use Pythagorean theorem A^2 + B^2 = C^2
+    // Could use Math.pow somehow to get the exponents
   isObtuse: function(){
-    return this.triSideA
-
+    return ((this.triSideA * this.sideA) + (this.triSideB * this.sideB)) =< (this.triSideC * this.sideC)
+    //**Test this**
+    //I'm not sure this is correct but in my head I don't see why not.
   }
 };
 
