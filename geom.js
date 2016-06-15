@@ -4,12 +4,18 @@ function Rectangle(length, width) {
 }
 Recatangle.prototype{
   //  isSquare - returns true if the rectangle is a square.
-  isSquare: function() {
+  isSquare: function(){
     return this.length === this.width;
   }
+  //  area - calculates the area of the rectangle.
+  area: function(){
+    return this.length * this.width;
+  }
+  //  perimeter - calculates the perimeter of the rectangle.
+  perimeter: function(){
+    return this.length + this.width + this.length + this.width;
+  }
 }
-//  area - calculates the area of the rectangle.
-//  perimeter - calculates the perimeter of the rectangle.
 
 
 function Triangle(sideA, sideB, sideC) {
