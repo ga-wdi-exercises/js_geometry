@@ -111,7 +111,6 @@ Triangle.prototype.isEquilateral = function(){
     sides.push(this.sideB);
     sides.push(this.sideC);
     sides.sort();
-    console.log(sides.toString());
     var largestSideIndex = sides.length - 1;
     var largestSide = sides[largestSideIndex];
     var sideCompareValue = sides[0] + sides[1];
