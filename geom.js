@@ -53,7 +53,8 @@ function LineSegment(x1, y1, x2, y2) {
 }
 LineSegment.prototype = {
   length: function(){
-    return (this.x1 + this.y1) === (this.x2 + this.y2);
+    var a = (this.x2 - this.x1);
+    var b = (this.y2 - this.y1);
+    return Math.sqrt ( a * a + b * b );
   }
-
 }
