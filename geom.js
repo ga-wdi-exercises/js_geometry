@@ -61,3 +61,11 @@ class LineSegment {
     return Math.sqrt(a * a + b * b);
   }
 }
+
+
+// NOTE: DO NOT REMOVE OR ALTER
+module.exports = {
+  Rectangle: Rectangle,
+  Triangle: Triangle,
+  LineSegment: LineSegment
+}
