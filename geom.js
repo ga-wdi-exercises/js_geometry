@@ -4,7 +4,13 @@ class Rectangle {
     this.width = width;
   }
   isSquare () {
-    this.length === this.width
+    square = this.length === this.width;
+  }
+  area () {
+    area = this.width * this.length;
+  }
+  perimeter () {
+    perimeter = (2)(this.length * this.width);
   }
 }
 
@@ -27,6 +33,8 @@ class LineSegment {
   }
 }
 
+const square = new Rectangle (4, 4)
+const area = new Rectangle (5, 9)
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
   Rectangle: Rectangle,
