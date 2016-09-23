@@ -21,6 +21,19 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+  isEquilateral () {
+    this.sideA === this.sideB === this.sideC;
+  }
+  isIsoceles () {
+    this.sideA === this.sideB || this.sideC === this.sideA
+
+  }
+  area () {
+
+  }
+  isObtuse () {
+
+  }
 }
 
 
@@ -30,6 +43,9 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+  }
+  length () {
+    
   }
 }
 
