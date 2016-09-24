@@ -90,7 +90,7 @@ class LineSegment {
     this.y2 = y2;
   }
   length(){
-    
+    return this.length = Math.sqrt(((this.x2-this.x1)**2)+((this.y2-this.y1)**2));
   }
 }
 
