@@ -43,12 +43,9 @@ class Triangle {
     }
   }
   area() {
-    if ((this.sideA + this.sideB + this.sideC)/2) {
-      return true;
-    } else {
-      return false;
-    }
+    return((this.sideA + this.sideB + this.sideC)/2);
   }
+
 }
 const triangle1 = new Triangle(2,2,2)
 const triangle3 = new Triangle(2,4,2)
@@ -60,6 +57,10 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+  }
+  length() {
+    var length = Math.sqrt(squareNumber(sideA) + squareNumber(sideB));
+    return length;
   }
 }
 
