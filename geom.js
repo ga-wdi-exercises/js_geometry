@@ -45,6 +45,12 @@ class Triangle {
   area() {
     return((this.sideA + this.sideB + this.sideC)/2);
   }
+  isObtuse() {
+    var sides = [this.sideA, this.sideB, this.sideC];
+    sides.sort();
+    return((Math.pow(sides[0],2) + Math.pow(sides[1],2)) < Math.pow(sides[2],2));
+
+  }
 
 }
 const triangle1 = new Triangle(2,2,2)
