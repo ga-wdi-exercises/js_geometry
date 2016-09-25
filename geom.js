@@ -3,8 +3,24 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-}
+  isSquare() {
+    if(this.length === this.width) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  area() {
+    return this.length * this.width;
+  }
+  perimeter() {
+    return 2*(this.length + this.width);
+  }
 
+}
+var rectangle1 = new Rectangle(4, 3);
+var rectangle2 = new Rectangle(4, 4);
+var rectangle3 = new Rectangle(4, 5);
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -13,7 +29,6 @@ class Triangle {
     this.sideC = sideC;
   }
 }
-
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
