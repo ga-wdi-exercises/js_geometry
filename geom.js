@@ -18,9 +18,9 @@ class Rectangle {
   }
 
 }
-var rectangle1 = new Rectangle(4, 3);
-var rectangle2 = new Rectangle(4, 4);
-var rectangle3 = new Rectangle(4, 5);
+const rectangle1 = new Rectangle(4, 3);
+const rectangle2 = new Rectangle(4, 4);
+const rectangle3 = new Rectangle(4, 5);
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -28,7 +28,31 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+  isEquilateral() {
+    if(this.sideA === this.sideB === this.sideC) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  isIsosceles() {
+    if (this.sideA === this.sideB || this.sideA === this.sideC || this.sideB === this.sideC) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  area() {
+    if ((this.sideA + this.sideB + this.sideC)/2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+const triangle1 = new Triangle(2,2,2)
+const triangle3 = new Triangle(2,4,2)
+const triangle2 = new Triangle(2,3,4)
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
@@ -40,8 +64,8 @@ class LineSegment {
 }
 
 // NOTE: DO NOT REMOVE OR ALTER
-module.exports = {
-  Rectangle: Rectangle,
-  Triangle: Triangle,
-  LineSegment: LineSegment
-}
+// module.exports = {
+//   Rectangle: Rectangle,
+//   Triangle: Triangle,
+//   LineSegment: LineSegment
+// }
