@@ -35,11 +35,11 @@ class Triangle {
   isIsoceles () {
     return this.sideA === this.sideB || this.sideC === this.sideA || this.sideC === this.sideB;
   }
-  area () {
-    return
+  getArea () {
+    return ((2 * this.sideA/this.sideB) * (this.sideB) *2)
   }
   isObtuse () {
-    return
+    return this.sideA ** 2 + this.sideB ** 2 < this.sideC ** 2
   }
 }
 
@@ -49,7 +49,11 @@ const equilateral = new Triangle (3, 4, 7)
 const isoceles = new Triangle (5, 5, 9)
 //console.log(isoceles.isIsoceles);
 
-const obtuse = new Triangle
+const areaT = new Triangle
+console.log(areaT.getArea)
+
+const obtuse = new Triangle (2, 1, 10)
+//console.log(obtuse.isObutse)
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
@@ -58,11 +62,15 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
-  length () {
-    return x1 + y1 && y1 + y2;
+  calcLength () {
+    return (x1 + y1) && (x2 + y2);
   }
 }
 
+const length = new LineSegment (2, 1, 6, 4)
+//console.log(length.calcLength)
+
+//still need area of Triangle and length of line segment
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
