@@ -70,7 +70,14 @@ class LineSegment {
 		this.x2 = x2;
 		this.y2 = y2;
 	}
+	length() {
+		return ((this.x1 - this.x2) ** 2 + (this.y1 - this.y2) ** 2) ** 0.5
+	}
 }
+
+var line1 = new LineSegment(0, 0, 8, 0)
+var line2 = new LineSegment(1, 1, 4, 5)
+var line3 = new LineSegment(-3, 1, 4, -7)
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
