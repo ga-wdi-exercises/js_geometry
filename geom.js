@@ -4,14 +4,13 @@ class Rectangle {
     this.width = width;
   }
   isSquare(){
-    if(width === length);
-    console.log("true");
+    return this.width === this.length
   }
   area(){
-    return length * width;
+    return (this.length) * (this.width);
   }
   perimeter(){
-    return (length *2) + (width * 2);
+    return (this.length *2) + (this.width * 2);
   }
 }
 
@@ -21,6 +20,12 @@ class Triangle {
     this.sideA = sideA;
     this.sideB = sideB;
     this.sideC = sideC;
+  }
+  isEquilateral(){
+    return (this.sideA === this.sideB) && (this.sideA === this.sideC)
+  }
+  isIsosceles(){
+    return (this.sideA === this.sideB) || (this.sideB === this.sideC) || (this.sideA == this.sideC)
   }
 }
 
@@ -35,8 +40,8 @@ class LineSegment {
 }
 
 // NOTE: DO NOT REMOVE OR ALTER
-module.exports = {
-  Rectangle: Rectangle,
-  Triangle: Triangle,
-  LineSegment: LineSegment
-}
+// module.exports = {
+//   Rectangle: Rectangle,
+//   Triangle: Triangle,
+//   LineSegment: LineSegment
+// }
