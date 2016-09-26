@@ -44,9 +44,21 @@ class Triangle {
       return false
     }
   }
+  area(base, height){
+    var s = ((this.sideA +this.sideB + this.sideC)/2)
+    return Math.sqrt((s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC)))
+  }
+  isObtuse(){ //map
+    var newArray = [this.sideA, this.sideB, this.sideC].sort()
+    if (((newArray[0]**2) + (newArray[1]**2)) < (newArray[2]**2)) {
+      return true
+    }else{
+      return false
+    }
+  }
+}
 
-
-
+const newTriangle= new Triangle(2,3,4);
 
 
 class LineSegment {
@@ -56,9 +68,17 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
-}
+  length(){
+    var distance = Math.sqrt(((this.x2-this.x1)**2) + ((this.y2-this.y1)**2))
+    return distance
+  }
+  }
 
-// NOTE: DO NOT REMOVE OR ALTER
+  const newLineSegment= new LineSegment(2,2,4,4);
+
+
+
+// //NOTE: DO NOT REMOVE OR ALTER
 // module.exports = {
 //   Rectangle: Rectangle,
 //   Triangle: Triangle,
