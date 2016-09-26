@@ -33,6 +33,16 @@ class Triangle {
       * (semiPerimeter - this.sideB) * (semiPerimeter - this.sideC));
     return area;
   }
+  isObtuse() {
+    let sides = [this.sideA, this.sideB, this.sideC];
+    let [a, b, c] = sides;
+    let longSide = Math.max(a, b, c);
+    sides.splice(sides.indexOf(longSide), 1);
+    if (longSide ** 2 > (sides[0] ** 2) + (sides[1] ** 2))
+      return true
+    else
+      return false
+  }
 }
 
 
@@ -42,6 +52,12 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+  }
+  length() {
+    let deltaX = this.x2 - this.x1;
+    let deltaY = this.y2 - this.y1;
+    let length = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+    return length;
   }
 }
 
