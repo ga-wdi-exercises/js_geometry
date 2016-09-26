@@ -3,8 +3,18 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-}
 
+  isSquare () {
+    if (this.length === this.width) {
+      console.log (`This is a squre.`)
+      return true
+    }
+    else {
+      return false
+    }
+  }
+}
+const square = new Rectangle (4,4);
 
 class Triangle {
   constructor(sideA, sideB, sideC){
