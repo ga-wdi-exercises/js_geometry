@@ -37,30 +37,50 @@ class Triangle {
 
   isIsosceles(){
     if (
-      (this.sideA == this.sideB && this.sideA != this.sideC)
+          (this.sideA == this.sideB && this.sideA != this.sideC)
        || (this.sideC == this.sideB && this.sideC != this.sideA)
-       || (this.sideA == this.sideC && this.sideA != this.sideB)) {
-
-      console.log("this is an isosceles")
+       || (this.sideA == this.sideC && this.sideA != this.sideB)
+    ) {
+        console.log("this is an isosceles")
+        return true
+    } else {
+      return false
     }
-
   }
-}
-// var test = new triangle (3,3,8)
-//test.isIsosceles()
 
-class LineSegment {
-  constructor(x1, y1, x2, y2){
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
+  isArea(){
+    var s = (this.sideA + this.sideB + this.sideC) / 2
+    return Math.sqrt(s*(s - this.sideA) * (s - this.sideB) * (s - this.sideC))
   }
+isObtuse () {
+  if ( (this.sideA * this.sideA) > ((this.sideB * this.sideB) + (this.sideC * this.sideC))
+  || (this.sideB * this.sideB) > ((this.sideA * this.sideA) + (this.sideC * this.sideC))
+  || (this.sideC * this.sideC) > ((this.sideB * this.sideB) + (this.sideA * this.sideA))
+
+)
+  return true
+} else {
+  return false
 }
 
-// NOTE: DO NOT REMOVE OR ALTER
-// module.exports = {
-//   Rectangle: Rectangle,
-//   Triangle: Triangle,
-//   LineSegment: LineSegment
+
+
+}
+
+var test = new Triangle (3,4,8)
+
+// class LineSegment {
+//   constructor(x1, y1, x2, y2){
+//     this.x1 = x1;
+//     this.y1 = y1;
+//     this.x2 = x2;
+//     this.y2 = y2;
+//   }
 // }
+//
+// // NOTE: DO NOT REMOVE OR ALTER
+// // module.exports = {
+// //   Rectangle: Rectangle,
+// //   Triangle: Triangle,
+// //   LineSegment: LineSegment
+// // }
