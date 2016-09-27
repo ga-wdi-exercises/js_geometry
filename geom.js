@@ -31,7 +31,7 @@ class Triangle {
         if (
                 (this.sideA == this.sideB &&  this.sideA != this.sideC)
             ||  (this.sideA == this.sideC &&  this.sideA != this.sideB)
-            ||  (this.sideB == this.sideC && this.sideB !=  this.sideA)
+            ||  (this.sideB == this.sideC && this.sideB != this.sideA)
         ) {
             console.log("It's an Isocsceles!")
             return true
@@ -44,6 +44,11 @@ class Triangle {
         }
     }
     area(){
+        var s = (( this.sideA + this.sideB + this.sideC ))/2
+        return Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC)) 
+    }
+    isObtuse(){
+        
     }
 }
 
