@@ -64,7 +64,7 @@ class LineSegment {
     this.y2 = y2;
   }
   calcLength () {
-    return Math.sqrt(((this.x2-this.x1)**2)-((this.y2-this.y1)**2));
+    return Math.sqrt(((this.x2-this.x1)**2)+((this.y2-this.y1)**2));
   }
 }
 
