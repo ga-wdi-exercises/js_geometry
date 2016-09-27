@@ -7,8 +7,8 @@ class Rectangle {
     if (this.length === this.width){
       console.log("this is a square!")
     } else {
-    console.log("this is a rectangle")
-  }
+      console.log("this is a rectangle")
+    }
     //var tes = new Rectangle(5,5)
     //test.isSquare()
   }
@@ -31,12 +31,23 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
-isEquilateral () {
-  console.log( (this.sideA === this.sideB) && (this.sideB === this.sideC) && (this.sideC === this.sideA))
-}
+  isEquilateral () {
+    console.log( (this.sideA === this.sideB) && (this.sideB === this.sideC) && (this.sideC === this.sideA))
+  }
 
-}
+  isIsosceles(){
+    if (
+      (this.sideA == this.sideB && this.sideA != this.sideC)
+       || (this.sideC == this.sideB && this.sideC != this.sideA)
+       || (this.sideA == this.sideC && this.sideA != this.sideB)) {
 
+      console.log("this is an isosceles")
+    }
+
+  }
+}
+// var test = new triangle (3,3,8)
+//test.isIsosceles()
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
