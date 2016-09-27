@@ -3,8 +3,12 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare () {
+    if (this.length === this.width){
+    console.log("this is a square!")
+  }
 }
-
+}
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -25,8 +29,8 @@ class LineSegment {
 }
 
 // NOTE: DO NOT REMOVE OR ALTER
-module.exports = {
-  Rectangle: Rectangle,
-  Triangle: Triangle,
-  LineSegment: LineSegment
-}
+// module.exports = {
+//   Rectangle: Rectangle,
+//   Triangle: Triangle,
+//   LineSegment: LineSegment
+// }
