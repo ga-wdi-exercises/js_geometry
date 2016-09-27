@@ -27,12 +27,37 @@ class Rectangle {
 // test.perimeter()
 
 class Triangle {
-  constructor(sideA, sideB, sideC){
+  constructor(sideA, sideB, sideC) {
     this.sideA = sideA;
     this.sideB = sideB;
     this.sideC = sideC;
   }
+
+  isEquilateral() {
+    if (this.sideA == this.sideB && this.sideA == this.sideC && this.sideC == this.sideB) {
+      console.log("True! You have a Equilateral Triangle!");
+    } else {
+      console.log("False! This is not a Equilateral Triangle");
+    }
+  }
+
+  isIsosceles() {
+    if ((this.sideA === this.sideB) || (this.sideA === this.sideC)) {
+      console.log("True! You have a Isosceles Triangle!");
+/// this if statement returned true everytime... Why is that? Shouldn't this work?
+
+    // if ((this.sideA === this.sideB && != this.sideC) || (this.sideA === this.sideC && != this.sideB) || (this.sideB === this.sideC && != this.sideA)) {
+    } else {
+      console.log("False! This is not a Isosceles Triangle");
+ }
 }
+}
+
+
+// 1/2 base times height
+// assest the certimy perimeter forumla
+// a + b + c / 2
+// forumela for area of the traiage ... s's fancy square roots
 
 
 class LineSegment {
