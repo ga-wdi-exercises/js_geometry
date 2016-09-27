@@ -30,7 +30,7 @@ class Triangle {
     this.sideC = sideC;
   }
   isEquilateral () {
-  return this.sideA === this.sideB === this.sideC;
+  return this.sideA === this.sideB && this.sideB === this.sideC;
   }
   isIsoceles () {
     return this.sideA === this.sideB || this.sideC === this.sideA || this.sideC === this.sideB;
