@@ -20,6 +20,8 @@ class Rectangle {
   perimeter(){
     console.log((this.length * 2) + (this.width * 2))
   }
+  // var test = new Rectangle (4,7)
+  // test.perimeter()
 }
 
 
@@ -29,6 +31,10 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+isEquilateral () {
+  console.log( (this.sideA === this.sideB) && (this.sideB === this.sideC) && (this.sideC === this.sideA))
+}
+
 }
 
 
