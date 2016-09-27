@@ -5,10 +5,23 @@ class Rectangle {
   }
   isSquare () {
     if (this.length === this.width){
-    console.log("this is a square!")
+      console.log("this is a square!")
+    } else {
+    console.log("this is a rectangle")
+  }
+    //var tes = new Rectangle(5,5)
+    //test.isSquare()
+  }
+  area(){
+    console.log(this.length * this.width)
+  }
+  // var test = new Rectangle (7,9)
+  // test.area()
+  perimeter(){
+    console.log((this.length * 2) + (this.width * 2))
   }
 }
-}
+
 
 class Triangle {
   constructor(sideA, sideB, sideC){
