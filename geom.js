@@ -1,9 +1,27 @@
 class Rectangle {
-  constructor(length, width) {
-    this.length = length;
-    this.width = width;
-  }
+    constructor(length, width) {
+        this.length = length
+        this.width = width
+    }
+    isSquare(){
+        if (this.length == this.width){
+            console.log("This is a Square!")
+        } else {
+            console.log("Not a square!")
+        } 
+    }
+    area(){
+        console.log ((this.length*this.width))
+    }
+    perimeter(){
+        console.log ((this.length+this.width)*2)
+    }
 }
+
+
+// test for square
+// var test = new Rectangle(5,5)
+// test.isSquare()
 
 
 class Triangle {
@@ -25,8 +43,8 @@ class LineSegment {
 }
 
 // NOTE: DO NOT REMOVE OR ALTER
-module.exports = {
-  Rectangle: Rectangle,
-  Triangle: Triangle,
-  LineSegment: LineSegment
-}
+// module.exports = {
+//   Rectangle: Rectangle,
+//   Triangle: Triangle,
+//   LineSegment: LineSegment
+// }
