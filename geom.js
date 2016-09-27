@@ -39,17 +39,18 @@ class Triangle {
   }
   isIsosceles() {
     if (this.sideA === this.sideB && this.sideA != this.sideC || this.sideA === this.sideC && this.sideA != this.sideB || this.sideB === this.sideC && this.sideB != this.sideA) {
-
-      console.log("this is Isosceles!")
+        console.log("this is Isosceles!")
     }  else {
         console.log("this is not Isosceles!")
   }
 }
-}
 
-  // area() {
-  //
-  //   }
+  area() {
+    var s = (this.sideA + this.sideB + this.sideC)/ 2
+    return Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))
+
+    }
+  }
 
 
 // var test = new Triangle(3, 3, 3)
