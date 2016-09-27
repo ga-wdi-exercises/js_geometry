@@ -27,6 +27,14 @@ class Triangle {
   isIsosceles(){
     return (this.sideA === this.sideB) || (this.sideB === this.sideC) || (this.sideA == this.sideC)
   }
+  area(){
+    var a = this.sideA;
+    var b = this.sideB;
+    var c = this.sideC;
+    var s = (a+b+c)/2;
+    return Math.sqrt(s*(s-a)*(s-b)*(s-c))
+
+  }
 }
 
 
@@ -36,6 +44,11 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+  }
+  length(){
+    var x = Math.abs(this.x2 - this.x1) * Math.abs(this.x2 - this.x1)
+    var y = Math.abs(this.y2 - this.y1) * Math.abs(this.y2 - this.y1)
+    return Math.sqrt(x + y);
   }
 }
 
