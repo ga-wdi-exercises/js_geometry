@@ -55,9 +55,19 @@ class Triangle {
 //this doesn't work if a side's length is equal to s
     return a
   }
-  // isObtuse(){
-  //
-  // }
+  isObtuse(){
+    let sides = [this.sideA, this.sideB, this.sideC]
+    let sorted = sides.sort()
+    if (((sorted[0]*sorted[0]) + (sorted[1]*sorted[1])) > (sorted[2]*sorted[2])){
+      console.log('acute');
+      return false
+    } else if (((sorted[0]*sorted[0]) + (sorted[1]*sorted[1])) == (sorted[2]*sorted[2])){
+      console.log('right');
+      return false
+    } else {
+      return true
+    }
+  }
 }
 const one = new Triangle(2,2,2)
 const two = new Triangle(2,6,6)
