@@ -45,12 +45,24 @@ class Triangle {
   }
 }
 
+
+// if (this.sideA **2 + this.sideB**2) > (this.sideC**2){
+
+
+
   area() {
     var s = (this.sideA + this.sideB + this.sideC)/ 2
     return Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))
+  }
 
+  isObtuse() {
+    if ((this.sideA **2) > (this.sideB ** 2 + this.sideC **2)) {
+        console.log("This is obtuse!")
+    } else {
+        console.log("This is not obtuse!")
     }
   }
+}
 
 
 // var test = new Triangle(3, 3, 3)
