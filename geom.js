@@ -1,3 +1,5 @@
+//Jasmine works!
+
 class Rectangle {
   constructor(length, width) {
     this.length = length;
@@ -40,15 +42,18 @@ class Triangle {
     else if ((this.sideB == this.sideC) && (this.sideA != this.sideC)){
       return true
     }
+    else if ((this.sideA == this.sideC) && (this.sideB != this.sideC)){
+      return true
+    }
     else{
       return false
     }
   }
   area(){
     let s = (this.sideA + this.sideB + this.sideC)/2
-    let a = Math.sqrt(s * (s-this.sideA) * (s-this.sideB) * (s-this.sideC))
+    var a = Math.sqrt(s * (s-this.sideA) * (s-this.sideB) * (s-this.sideC))
 //this doesn't work if a side's length is equal to s
-    console.log(a);
+    return a
   }
   // isObtuse(){
   //
@@ -57,6 +62,7 @@ class Triangle {
 const one = new Triangle(2,2,2)
 const two = new Triangle(2,6,6)
 const three = new Triangle(2,6,8)
+const test = new Triangle(4,5,3)
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
@@ -80,17 +86,17 @@ class LineSegment {
     }  else{
       var side2 = Math.abs(this.y1) + Math.abs(this.y2)
       }
-    let c = Math.sqrt((side1**2)+(side2**2))
+    let c = Math.sqrt((side1*side1)+(side2*side2))
     return c
   }
 }
 
 const z = new LineSegment(1,1,2,2)
 const q = new LineSegment(-1,-1,-2,-2)
-//
-// // NOTE: DO NOT REMOVE OR ALTER
-// module.exports = {
-//   Rectangle: Rectangle,
-//   Triangle: Triangle,
-//   LineSegment: LineSegment
-// }
+
+// NOTE: DO NOT REMOVE OR ALTER
+module.exports = {
+  Rectangle: Rectangle,
+  Triangle: Triangle,
+  LineSegment: LineSegment
+}
