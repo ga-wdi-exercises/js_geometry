@@ -33,7 +33,12 @@ class Triangle {
     var c = this.sideC;
     var s = (a+b+c)/2;
     return Math.sqrt(s*(s-a)*(s-b)*(s-c))
-
+  }
+  isObtuse(){
+    var a = this.sideA;
+    var b = this.sideB;
+    var c = this.sideC;
+    return (Math.pow(a,2) + Math.pow(b,2)) < Math.pow(c,2)
   }
 }
 
