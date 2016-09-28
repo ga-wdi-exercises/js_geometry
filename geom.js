@@ -59,8 +59,12 @@ function rInt(max = 100) {
 }
 
 var rectangles = [new Rectangle(rInt(),rInt()),new Rectangle(rInt(),rInt()),new Rectangle(rInt(),rInt()),new Rectangle(10,10)];
-var triangles = [new Triangle(5,5,5),new Triangle(100,100,rInt()),new Triangle(rInt(),rInt(),rInt()),new Triangle(rInt(),rInt(),rInt())];
 var lines = [new LineSegment(rInt(),rInt(),rInt(),rInt()),new LineSegment(rInt(),rInt(),rInt(),rInt()),new LineSegment(rInt(),rInt(),rInt(),rInt()),new LineSegment(rInt(),rInt(),rInt(),rInt())];
+var triangles = [new Triangle(5,5,5),new Triangle(100,100,rInt())];
+triangles.push(new Triangle(rInt(),rInt(),rInt()));
+triangles.push(new Triangle(rInt(),rInt(),rInt()));
+triangles.push(new Triangle(rInt(),rInt(),rInt()));
+triangles.push(new Triangle(rInt(),rInt(),rInt()));
 
 
 // NOTE: DO NOT REMOVE OR ALTER
