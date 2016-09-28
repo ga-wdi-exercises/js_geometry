@@ -36,7 +36,9 @@ class Triangle {
   }
   isObtuse() {
     let { sideA: a, sideB: b, sideC: c} = this;
-    return Math.pow(c,2) / 2 < Math.pow(a,2) + Math.pow(b,2) && Math.pow(a,2) + Math.pow(b,2) < Math.pow(c,2)
+    return (Math.pow(a,2) / 2 < Math.pow(c,2) + Math.pow(b,2) && Math.pow(c,2) + Math.pow(b,2) < Math.pow(a,2)) ||
+      (Math.pow(b,2) / 2 < Math.pow(a,2) + Math.pow(c,2) && Math.pow(a,2) + Math.pow(c,2) < Math.pow(b,2)) ||
+      (Math.pow(c,2) / 2 < Math.pow(a,2) + Math.pow(b,2) && Math.pow(a,2) + Math.pow(b,2) < Math.pow(c,2))
   }
 }
 
@@ -61,10 +63,12 @@ function rInt(max = 100) {
 var rectangles = [new Rectangle(rInt(),rInt()),new Rectangle(rInt(),rInt()),new Rectangle(rInt(),rInt()),new Rectangle(10,10)];
 var lines = [new LineSegment(rInt(),rInt(),rInt(),rInt()),new LineSegment(rInt(),rInt(),rInt(),rInt()),new LineSegment(rInt(),rInt(),rInt(),rInt()),new LineSegment(rInt(),rInt(),rInt(),rInt())];
 var triangles = [new Triangle(5,5,5),new Triangle(100,100,rInt())];
+var obtuseTriangles = [new Triangle(10,10,18),new Triangle(10,18,10),new Triangle(18,10,10)]
 triangles.push(new Triangle(rInt(),rInt(),rInt()));
 triangles.push(new Triangle(rInt(),rInt(),rInt()));
 triangles.push(new Triangle(rInt(),rInt(),rInt()));
 triangles.push(new Triangle(rInt(),rInt(),rInt()));
+
 
 
 // NOTE: DO NOT REMOVE OR ALTER
