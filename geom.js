@@ -3,7 +3,17 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare() {
+    return (this.length === this.width);
+  }
+  area() {
+    return this.length * this.width;
+  }
+  perimeter() {
+    return (this.length + this.width) * 2;
+  }
 }
+
 
 
 class Triangle {
@@ -11,6 +21,12 @@ class Triangle {
     this.sideA = sideA;
     this.sideB = sideB;
     this.sideC = sideC;
+  }
+  isEquilateral() {
+    return (this.sideA === this.sideB && this.sideB === this.sideC)
+  }
+  isIsoceles() {
+    return (this.sideA === this.sideB || this.sideB === this.sideC || this.sideC === this.sideA)
   }
 }
 
