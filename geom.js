@@ -3,7 +3,12 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare =
+    if (this.length === this.width)
 }
+//* `isSquare` - returns true if the rectangle is a square.
+//* `area` - calculates the area of the rectangle.
+//* `perimeter` - calculates the perimeter of the rectangle.
 
 
 class Triangle {
