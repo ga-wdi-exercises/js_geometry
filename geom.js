@@ -44,21 +44,27 @@ class Triangle {
   isIsosceles() {
     if ((this.sideA === this.sideB) || (this.sideA === this.sideC)) {
       console.log("True! You have a Isosceles Triangle!");
-/// this if statement returned true everytime... Why is that? Shouldn't this work?
-
-    // if ((this.sideA === this.sideB && != this.sideC) || (this.sideA === this.sideC && != this.sideB) || (this.sideB === this.sideC && != this.sideA)) {
     } else {
       console.log("False! This is not a Isosceles Triangle");
- }
+    }
+  }
+
+  area() {
+    var a = this.sideA
+    var b = this.sideB
+    var c = this.sideC
+
+    var s = (a + b + c) / 2
+    var a1 = (s*(s-a)*(s-b)*(s-c))
+    console.log(a1);
+  }
+
+  isObtuse() {
+// enter some super awesome formula for finding out if
+// a Triangle is Obtuse. console.log it out!
+
+  }
 }
-}
-
-
-// 1/2 base times height
-// assest the certimy perimeter forumla
-// a + b + c / 2
-// forumela for area of the traiage ... s's fancy square roots
-
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
@@ -66,6 +72,13 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+  }
+
+  lineLength() {
+    var firstLine = this.x1**2 + this.y1**2
+    var secondLine = this.x2**2 + this.y2**2
+    length = firstLine*2 + secondLine*2
+    console.log(length);
   }
 }
 
