@@ -5,6 +5,30 @@ class Rectangle {
   }
 }
 
+isSquare = " ";
+
+isSquare(){
+
+square = length*length;
+
+for( i = 0; i > square; length*length){
+
+  if (square > length)
+    isSquare = false;
+
+  if (square = length)
+    isSquare = true;
+  }
+}
+
+area(){
+  length * width = area;
+}
+
+perimeter(){
+  length + length + width + width = perimeter;
+}
+
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -12,6 +36,18 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+}
+
+isEquilateral(){
+
+  if(sideA == sideB == sideC)
+    return "true";
+}
+
+isIsosceles(){
+
+  if(sideA == sideB != sideC)
+    return "true";
 }
 
 
