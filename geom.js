@@ -53,7 +53,7 @@ class Triangle {
     return ((s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))**(1/2))
   }
   isObtuse() {
-
+    // fill in
   }
 }
 
@@ -65,7 +65,7 @@ class LineSegment {
     this.y2 = y2;
   }
   length() {
-    
+    // fill in
   }
 }
 
