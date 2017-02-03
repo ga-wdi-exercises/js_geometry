@@ -68,15 +68,15 @@ class LineSegment {
   }
   length(){
     console.log(this)
-    let sX = this.x1-this.x2
-    let sY = this.y1-this.y2
+    let sX = Math.abs(this.x1-this.x2)
+    let sY = Math.abs(this.y1-this.y2)
     let sXx = Math.pow(sX,2)
     let sYy = Math.pow(sY,2)
     return Math.sqrt(sXx+sYy)
   }
 }
 
-let line = new LineSegment(7, 3, 8, 2)
+let line = new LineSegment(4, 2, 6, 4)
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
