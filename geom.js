@@ -49,7 +49,10 @@ class Triangle {
     return Math.sqrt(sP*sA*sB*sC)
   }
   isObtuse() {
-    if (this.sideA !== this.sideB && this.sideA !== this.sideC && this.sideB !== this.sideC){
+    var sA = Math.pow(this.sideA,2);
+    var sB = Math.pow(this.sideB,2);
+    var sC = Math.pow(this.sideC,2);
+    if (sA+sB < sC || sB+sC < sA || sC+sA < sB){
       return true
     }else{
       return false
@@ -57,7 +60,7 @@ class Triangle {
   }
 }
 
-let triangle = new Triangle(15,16,17)
+let triangle = new Triangle(10,10,17)
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
