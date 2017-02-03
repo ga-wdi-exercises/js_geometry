@@ -6,6 +6,8 @@ class Rectangle {
   isSquare (){
     if (this.length == this.width){
       return true;
+    }else {
+      return false;
     }
   }
   area(){
@@ -24,13 +26,17 @@ class Triangle {
     this.sideC = sideC;
   }
   isEquilateral(){
-    if (this.sideA == this.sideB == this.sideC){
+    if (this.sideA == this.sideB && this.sideA == this.sideC){
       return true;
+    }else {
+      return false;
     }
   }
   isIsosceles(){
     if (this.sideA == this.sideB || this.sideB == this.sideC || this.sideA == this.sideC) {
       return true;
+    }else{
+      return false;
     }
   }
   area(){
@@ -39,14 +45,10 @@ class Triangle {
     return area
   }
   isObtuse(){
-    if (this.sideA == this.sideB == this.sideC){
-      return false
-    }
-    else if(this.sideA == this.sideB || this.sideB == this.sideC || this.sideA == this.sideC){
-      return false
-    }
-    else {
+    if ((this.sideA*this.sideA+this.sideB*this.sideB)< this.sideC*this.sideC){
       return true
+    } else {
+      return false
     }
   }
 }
