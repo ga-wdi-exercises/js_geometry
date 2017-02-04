@@ -3,37 +3,46 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-  isSquare(){
-    return this.length == this.width;
+  isSquare(length = this.length, width = this.width){
+    return length == width;
   }
-  area(){
-    return this.length*this.width;
+  area(length = this.length, width = this.width){
+    return length*width;
   }
-  perimeter(){
-    return (2*(this.length+this.width));
+  perimeter(length = this.length, width = this.width){
+    return (2*(length+width));
   }
 }
 
 
 class Triangle {
   constructor(sideA, sideB, sideC){
-    this.sideA = sideA;
-    this.sideB = sideB;
-    this.sideC = sideC;
+    if(this.isValid(sideA, sideB, sideC)) {
+      this.sideA = sideA;
+      this.sideB = sideB;
+      this.sideC = sideC;
+    } else {
+      throw new Error('Invalid triangle sides');
+    }
   }
-  isEquilateral() {
-    return this.sideA == this.sideB && this.sideC
+  isEquilateral(sideA = this.sideA, sideB = this.sideB, sideC = this.sideC) {
+    return sideA == sideB && sideC
   }
-  isIsosceles() {
-    return this.sideA == this.sideB || this.sideB == this.sideC || this.sideC == this.sideB;
+  isIsosceles(sideA = this.sideA, sideB = this.sideB, sideC = this.sideC) {
+    return sideA == sideB || sideB == sideC || sideC == sideB;
   }
-  area() {
-    let s = (this.sideA+this.sideB+this.sideC)/2
-    return Math.pow(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC),.5)
+  area(sideA = this.sideA, sideB = this.sideB, sideC = this.sideC) {
+    let s = (sideA+sideB+sideC)/2
+    return Math.pow(s*(s-sideA)*(s-sideB)*(s-sideC),.5)
   }
-  isObtuse() {
-    let sides = [parseInt(this.sideA),parseInt(this.sideB),parseInt(this.sideC)].sort((a, b)=> a-b);
-    return (Math.pow(sides[0],2) + Math.pow(sides[1],2) < Math.pow(sides[2],2))
+  isObtuse(sideA = this.sideA, sideB = this.sideB, sideC = this.sideC) {
+    let sides = [parseInt(sideA),parseInt(sideB),parseInt(sideC)].sort((a, b)=> a-b);
+    return (Math.pow(sides[0],2) + Math.pow(sides[1],2) < Math.pow(sides[2],2));
+  }
+  isValid(sideA = this.sideA, sideB = this.sideB, sideC = this.sideC) {
+    let sides = [parseInt(sideA),parseInt(sideB),parseInt(sideC)].sort((a, b)=> a-b);
+    console.log(sides)
+    return (sides[2] < sides[0] + sides[1]);
   }
 }
 
@@ -45,8 +54,8 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
-  length(){
-    return Math.pow((Math.pow((this.x1 - this.x2),2)+Math.pow((this.y1 - this.y2),2)),.5)
+  length(x1=this.x1, y1=this.y1, x2=this.x2, y2=this.y2){
+    return Math.pow((Math.pow((x1 - x2),2)+Math.pow((y1 - y2),2)),.5)
   }
 }
 
