@@ -53,7 +53,16 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
+  length(){
+    var xCoords = Math.abs(this.x2 - this.x1);
+    var yCoords = Math.abs(this.y2 - this.y1);
+    var squareAndAdd = Math.pow(xCoords, 2) + Math.pow(yCoords,2);
+    return Math.sqrt(squareAndAdd);
+  }
 }
+
+let lineSegment1 = new LineSegment(1,2, 3,5);
+let lineSegment2 = new LineSegment(4,2,6,8);
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
