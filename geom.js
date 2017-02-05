@@ -46,20 +46,33 @@ class Triangle {
         return false
       }
 }
+    area() {
+      this.p = (this.sideA + this.sideB + this.sideC) / 2;
+      return Math.sqrt(this.p * (this.p - this.sideA) * (this.p - this.sideB) * (this.p - this.sideC));
+
+  }
+    isObtuse() {
+      if (Math.pow(this.sideA,2) + Math.pow(this.sideB,2) < Math.pow(this.sideC,2)) {
+        return true
+      } else {
+        return false
+      };
+    }
 }
 
+// Area =
+ // Perimeter = a + b + c
+ // p = half Parameter
+ // Area = √ (p(p-a)(p-b)(p-c))
+// use Math.sqrt(x);
 
-const triOne = new Triangle (2,2,2);
-const triTwo = new Triangle (12,5,5);
-const triThree = new Triangle (20,20,3);
-
-
-
-
-
-
+// obtuse
+//Math.pow(`${this.sideC}`,2) = Math.pow(this.sideA,2) + Math.pow(this.sideA,2)
 
 
+const triOne = new Triangle (6,6,6);
+const triTwo = new Triangle (12,10,10);
+const triThree = new Triangle (5,10,14);
 
 
 
