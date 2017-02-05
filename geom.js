@@ -22,26 +22,34 @@ let recB = new Rectangle(2, 5);
 let recC = new Rectangle(4, 7);
 
 class Triangle {
-  constructor(sideA, sideB, sideC){
-    this.sideA = sideA;
-    this.sideB = sideB;
-    this.sideC = sideC;
+  constructor(a, b, c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
   }
   isEquilateral() {
-    if (this.sideA === this.sideB && this.sideB === this.sideC) {
+    if (this.a === this.b && this.b === this.c) {
       return true;
     }
     return false;
   }
   isIsosceles() {
-    if (this.sideA === this.sideB || this.sideB === this.sideC || this.sideA === this.sideC) {
+    if (this.a === this.b || this.b === this.c || this.c === this.a) {
       return true;
     }
     return false;
   }
   area() {
-    let s = (this.sideA + this.sideB + this.sideC) / 2;
-    return Math.sqrt(s*(s-sideA)*(s-sideB)*(s-sideC));
+    let s = (this.a + this.b + this.c) / 2;
+    return Math.sqrt(s*(s-this.a)*(s-this.b)*(s-this.c));
+  }
+  isObtuse() {
+    if (this.a**2 + this.b**2 < this.c**2 ||
+        this.b**2 + this.c**2 < this.a**2 ||
+        this.c**2 + this.a**2 < this.b**2) {
+      return true;
+    }
+    return false;
   }
 }
 
