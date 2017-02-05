@@ -23,6 +23,9 @@
   let rec2 = new Rectangle(60, 60);
   let rec3 = new Rectangle(60, 45);
 
+
+
+
   //Triangles
   class Triangle {
     constructor(sideA, sideB, sideC){
@@ -30,6 +33,7 @@
       this.sideB = sideB;
       this.sideC = sideC;
       this.semiperimeter();
+      this.arrangeByLength();
     }
     isEquilateral(){
       if ( (this.sideA == this.sideB) && (this.sideC == this.sideB) ){
@@ -52,16 +56,46 @@
     area(){
       return Math.sqrt( this.semi * (this.semi - this.sideA) *  (this.semi - this.sideB) * (this.semi - this.sideC) );
     }
+    arrangeByLength(){
+      if ( (this.sideA > this.sideB) && (this.sideA > this.sideC) ) {
+        this.large = 1 * (this.sideA);
+        this.medium = 1 * (this.sideB);
+        this.small = 1 * (this.sideC);
+          return this.large;
+      } if ( (this.sideB > this.sideA) && (this.sideB > this.sideC) ) {
+        this.large = 1 * (this.sideB);
+        this.medium = 1 * (this.sideC);
+        this.small = 1 * (this.sideA);
+        return this.large;
+      } if ( (this.sideC > this.sideB) && (this.sideC > this.sideA) ) {
+        this.large = 1 * (this.sideC);
+        this.medium = 1 * (this.sideB);
+        this.small = 1 * (this.sideA);
+        return this.large;
+      }
+      else {
+        return 'Triangle is acute';
+      }
+    }
     isObtuse(){
-
+      if ( (this.large * this.large) > ((this.medium * this.medium) + (this.small * this.small)) ) {
+        return true;
+      } else {
+        return false;
+      }
     }
   }
 
   let tri1 = new Triangle(60, 90, 60);
   let tri2 = new Triangle(60, 60, 60);
-  let tri3 = new Triangle(60, 45, 80);
+  let tri3 = new Triangle(30, 40, 60);
+  let tri4 = new Triangle(30, 60, 40);
+  let tri5 = new Triangle(60, 40, 30);
 
 
+
+
+  //LineSegment
   class LineSegment {
     constructor(x1, y1, x2, y2){
       this.x1 = x1;
@@ -78,6 +112,10 @@
   let lin2 = new LineSegment(2, 2, 10, 4);
   let lin3 = new LineSegment(0, 10, 22, 14);
   let lin4 = new LineSegment(2, 2, 4, 4);
+
+
+
+
 
   // NOTE: DO NOT REMOVE OR ALTER
   module.exports = {
