@@ -41,17 +41,21 @@ class Triangle {
   }
   area() {
     let s = (this.a + this.b + this.c) / 2;
-    return Math.sqrt(s*(s-this.a)*(s-this.b)*(s-this.c));
+    return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
   }
   isObtuse() {
-    if (this.a**2 + this.b**2 < this.c**2 ||
-        this.b**2 + this.c**2 < this.a**2 ||
-        this.c**2 + this.a**2 < this.b**2) {
+    if (this.a ** 2 + this.b ** 2 < this.c ** 2 ||
+        this.b ** 2 + this.c ** 2 < this.a ** 2 ||
+        this.c ** 2 + this.a ** 2 < this.b ** 2) {
       return true;
     }
     return false;
   }
 }
+
+let triA = new Triangle(1, 1, 1);
+let triB = new Triangle(4, 4, 7);
+let triC = new Triangle(2, 3, 4);
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
@@ -61,7 +65,7 @@ class LineSegment {
     this.y2 = y2;
   }
   length() {
-    return sqrt(Math.abs(x2 - x1) + Math.abs(y2 - y1));
+    return Math.sqrt((this.x2 - this.x1) ** 2 + (this.y2 - this.y1) ** 2);
   }
 }
 
