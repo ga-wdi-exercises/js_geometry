@@ -7,9 +7,7 @@ class Rectangle {
     if (this.length == this.width) {
       return true;
     }
-    else {
-      return false
-    }
+    return false
   }
   area() {
     return (this.length * this.width);
@@ -27,33 +25,26 @@ class Triangle {
     this.sideC = sideC;
   }
   isEquilaral() {
-    if (this.sideA == this.sideB && this.sideA == this.sideB && this.sideB == this.sideC) {
+    if (this.sideA == this.sideB && this.sideC) {
       return true
     }
-    else {
-      return false
-    }
+    return false
   }
   isIsoceles() {
-    if (this.sideA == this.sideB && this.sideA != this.sideC && this.sideB != this.sideC) {
+    if (this.sideA == this.sideB || this.sideB == this.sideC || this.sideA == this.sideC) {
       return true
     }
-    else if (this.sideB == this.sideC && this.sideB != this.sideA && this.sideC != this.sideA) {
-      return true
-    }
-    else if (this.sideA == this.sideC && this.sideA != this.sideB && this.sideC != this.sideB) {
-      return true
-    }
-    else {
-      return false
-    }
+    return false;
   }
   area() {
     var s = (this.sideA + this.sideB + this.sideC)/2;
     return ((s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))**(1/2))
   }
   isObtuse() {
-    // fill in
+    if (Math.pow(tri.sideA,2)+Math.pow(tri.sideB,2) < Math.pow(tri.sideC,2) || Math.pow(tri.sideB,2)+Math.pow(tri.sideC,2) < Math.pow(tri.sideA,2) || Math.pow(tri.sideA,2)+Math.pow(tri.sideC,2) < Math.pow(tri.sideB,2)) {
+      return true;
+    }
+    return false
   }
 }
 
@@ -65,12 +56,13 @@ class LineSegment {
     this.y2 = y2;
   }
   length() {
-    // fill in
+    return Math.sqrt(Math.pow((this.x2-this.x1),2)+Math.pow((this.y2-this.y1),2))
   }
 }
 
 let rect = new Rectangle(5,4);
 let tri = new Triangle(4,4,3);
+let line = new LineSegment(23,4,19,3);
 
 // NOTE: DO NOT REMOVE OR ALTER
 // module.exports = {
