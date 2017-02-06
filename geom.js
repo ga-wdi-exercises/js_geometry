@@ -66,28 +66,29 @@ class Triangle {
  // Area = √ (p(p-a)(p-b)(p-c))
 // use Math.sqrt(x);
 
-// obtuse
-//Math.pow(`${this.sideC}`,2) = Math.pow(this.sideA,2) + Math.pow(this.sideA,2)
-
-
 const triOne = new Triangle (6,6,6);
 const triTwo = new Triangle (12,10,10);
 const triThree = new Triangle (5,10,14);
 
 
 
-
-
-
-//
+// LINESEGMENT
 class LineSegment {
-  constructor(x1, y1, x2, y2){
+    constructor(x1, y1, x2, y2){
     this.x1 = x1;
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
   }
+    length() {
+    this.Xpoint = this.x1 - this.x2;
+    this.Ypoint = this.y1- this.y2;
+    this.xy = Math.pow(this.Xpoint,2) + Math.pow(this.Ypoint,2);
+    return Math.sqrt(this.xy);
+  }
 }
+
+const test = new LineSegment (5,4,3,2);
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
