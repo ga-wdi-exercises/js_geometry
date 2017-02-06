@@ -1,9 +1,9 @@
 /// RECTANGLE
 
 class Rectangle {
-  constructor(length, width) {
-    this.length = length;
-    this.width = width;
+    constructor(length, width) {
+      this.length = length;
+      this.width = width;
   }
     isSquare() {
     if (this.length === this.width) {
@@ -27,10 +27,10 @@ const recTwo = new Rectangle (10,16);
 // TRIANGLE
 
 class Triangle {
-  constructor(sideA, sideB, sideC){
-    this.sideA = sideA;
-    this.sideB = sideB;
-    this.sideC = sideC;
+    constructor(sideA, sideB, sideC){
+      this.sideA = sideA;
+      this.sideB = sideB;
+      this.sideC = sideC;
   }
     isEquilateral() {
       if (this.sideA === this.sideB  && this.sideB === this.sideC) {
@@ -88,7 +88,7 @@ class LineSegment {
   }
 }
 
-const test = new LineSegment (5,4,3,2);
+const coordOne = new LineSegment (5,4,3,2);
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
