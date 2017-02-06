@@ -38,7 +38,7 @@ class Triangle {
   }
   area() {
     var s = (this.sideA + this.sideB + this.sideC)/2;
-    return ((s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))**(1/2))
+    return Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))
   }
   isObtuse() {
     if (Math.pow(tri.sideA,2)+Math.pow(tri.sideB,2) < Math.pow(tri.sideC,2) || Math.pow(tri.sideB,2)+Math.pow(tri.sideC,2) < Math.pow(tri.sideA,2) || Math.pow(tri.sideA,2)+Math.pow(tri.sideC,2) < Math.pow(tri.sideB,2)) {
