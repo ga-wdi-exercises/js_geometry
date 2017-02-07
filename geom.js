@@ -3,8 +3,21 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+
+isSquare(){
+  if(length == width){
+    return true;
+  }
 }
 
+area(){
+  return length * width;
+}
+
+perimeter(){
+  return(length*width)*2;
+  }
+}
 
 class Triangle {
   constructor(sideA, sideB, sideC){
