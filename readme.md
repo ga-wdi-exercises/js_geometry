@@ -15,7 +15,6 @@ Create a few rectangles with different lengths and widths.
 
 **Bonus**: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
 
-
 ## Triangle
 
 Define a `Triangle` class. Its constructor should take three sides -- `sideA` `sideB` and `sideC` -- as arguments.
