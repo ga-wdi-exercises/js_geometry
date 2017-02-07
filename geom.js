@@ -39,7 +39,9 @@ class Triangle {
   area() {
     (this.sideC * this.sideB)/2;
   }
-  
+  isObtuse() {
+    x = (this.sideB > this.sideA > this.sideC); 
+  }
 }
 
 
