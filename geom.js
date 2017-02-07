@@ -19,7 +19,7 @@ class Rectangle {
 
 let Square = new Rectangle("4cm", "4cm");
 let Rectangle1 = new Rectangle("6cm", "10cm");
-let Rectangle2 = new Rectangle("12cm", "6cm"); 
+let Rectangle2 = new Rectangle("12cm", "6cm");
 
 
 class Triangle {
@@ -28,6 +28,11 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+  isEquilateral() {
+    this.sideA = this.sideB = this.sideC;
+    console.log("we equal");
+  }
+
 }
 
 
