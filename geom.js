@@ -4,7 +4,7 @@ class Rectangle {
     this.width = width;
   }
   isSquare() {
-    this.length = this.width;
+    x = this.length === this.width;
     console.log("square");
   }
   area() {
