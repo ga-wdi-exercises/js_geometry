@@ -77,6 +77,8 @@ class LineSegment {
   }
 }
 
+let line1 = new LineSegment("2cm"+"3cm");
+let line2 = new LineSegment("4cm"+"5cm"); 
 
 
 // NOTE: DO NOT REMOVE OR ALTER
