@@ -36,7 +36,10 @@ class Triangle {
     this.sideA = this.sideB;
     console.log("semi-equal");
   }
-
+  area() {
+    (this.sideC * this.sideB)/2;
+  }
+  
 }
 
 
