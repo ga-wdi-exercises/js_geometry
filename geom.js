@@ -32,6 +32,10 @@ class Triangle {
     this.sideA = this.sideB = this.sideC;
     console.log("we equal");
   }
+  isIsosceles() {
+    this.sideA = this.sideB;
+    console.log("semi-equal");
+  }
 
 }
 
