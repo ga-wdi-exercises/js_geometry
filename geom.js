@@ -7,9 +7,13 @@ class Rectangle {
     this.length = this.width;
     console.log("square");
   }
-  area(){
+  area() {
     x = this.length * this.width;
-    console.log("rectangle area"); 
+    console.log("rectangle area");
+  }
+  perimeter() {
+    x = (this.length + this.width) * 2;
+    console.log("all the sides");
   }
 }
 
