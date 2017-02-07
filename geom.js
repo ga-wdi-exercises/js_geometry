@@ -38,7 +38,7 @@ class Triangle {
     }
   }
   isIsosceles() {
-    if (this.sideA === this.sideB) {
+    if (this.sideA === this.sideB || this.sideB === this.sideC || this.sideA === this.sideC) {
       console.log("semi-equal");
     }
   }
