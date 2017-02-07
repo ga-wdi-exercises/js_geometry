@@ -29,11 +29,11 @@ class Triangle {
     this.sideC = sideC;
   }
   isEquilateral() {
-    this.sideA = this.sideB = this.sideC;
+    x = this.sideA === this.sideB === this.sideC;
     console.log("we equal");
   }
   isIsosceles() {
-    this.sideA = this.sideB;
+    x = this.sideA === this.sideB;
     console.log("semi-equal");
   }
   area() {
