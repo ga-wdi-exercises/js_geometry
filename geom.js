@@ -5,6 +5,27 @@ class Rectangle {
   }
 }
 
+let newRectancle1 = new Rectangle(4,4)
+let newRectangle2 = new Rectangle(2,2)
+
+
+
+isSquare
+if (this.length === this.width){
+  return true;
+}else{
+  return false;
+}
+
+area(){
+  return this.area = this.length * this.width;
+}
+
+perimiter(){
+  return this.perimeter = 2 *(this.length + this.width)
+}
+
+let
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -13,6 +34,8 @@ class Triangle {
     this.sideC = sideC;
   }
 }
+
+
 
 
 class LineSegment {
