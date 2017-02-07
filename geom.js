@@ -38,9 +38,11 @@ class Triangle {
   }
   area() {
     x = (this.sideC * this.sideB)/2;
+    console.log("area aight");
   }
   isObtuse() {
     x = (this.sideB > this.sideA > this.sideC);
+    console.log("obtuse"); 
   }
 }
 
