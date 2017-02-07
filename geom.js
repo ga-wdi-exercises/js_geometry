@@ -42,10 +42,12 @@ class Triangle {
   }
   isObtuse() {
     x = (this.sideB > this.sideA > this.sideC);
-    console.log("obtuse"); 
+    console.log("obtuse");
   }
 }
-
+let equal = new Triangle("7cm", "7cm", "7cm");
+let semi = new Triangle("9cm", "9cm", "5cm");
+let obtuse = new Triangle("20cm", "12cm", "7cm"); 
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
