@@ -37,10 +37,10 @@ class Triangle {
     console.log("semi-equal");
   }
   area() {
-    (this.sideC * this.sideB)/2;
+    x = (this.sideC * this.sideB)/2;
   }
   isObtuse() {
-    x = (this.sideB > this.sideA > this.sideC); 
+    x = (this.sideB > this.sideA > this.sideC);
   }
 }
 
