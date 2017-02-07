@@ -3,6 +3,14 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare() {
+    this.length = this.width;
+    console.log("square");
+  }
+  area(){
+    x = this.length * this.width;
+    console.log("rectangle area"); 
+  }
 }
 
 
@@ -29,4 +37,4 @@ module.exports = {
   Rectangle: Rectangle,
   Triangle: Triangle,
   LineSegment: LineSegment
-}
+};
