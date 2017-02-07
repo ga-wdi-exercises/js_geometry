@@ -67,6 +67,7 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
+  // Pythagorean theorem = a^{2}+b^{2}=c^{2}
   length() {
      if (Math.pow(this.x1, 2) + Math.pow(this.y1, 2)) {
        console.log("length1");
@@ -77,8 +78,13 @@ class LineSegment {
   }
 }
 
+// if (Math.pow(this.x1, 2)+ (Math.pow(this.y1, 2)) = (Math.pow(this.x2, 2)) + (Math.pow(this.y2, 2))) {
+//   console.("theorem");
+//   }
+// }
+
 let line1 = new LineSegment("2cm"+"3cm");
-let line2 = new LineSegment("4cm"+"5cm"); 
+let line2 = new LineSegment("4cm"+"5cm");
 
 
 // NOTE: DO NOT REMOVE OR ALTER
