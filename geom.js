@@ -3,8 +3,27 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+
+isSquare(){
+  if(this.length == this.width){
+    return true;
+  } else {
+    return false;
+  }
 }
 
+area(){
+  return this.length * this.width;
+}
+
+perimeter(){
+  return(this.length+this.width)*2;
+  }
+}
+
+const smallRectangle = new Rectangle(10,20);
+const mediumRectangle = new Rectangle(100, 200);
+const largeRectangle = new Rectangle(1000, 2000);
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -12,8 +31,33 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
-}
 
+  isEquilateral(){
+    if(this.sideA == this.sideB && this.sideA == this.sideC && this.sideB == this.sideC){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  isIsosceles(){
+    return (this.sideA == this.sideB || this.sideA == this.sideC || this.sideB == this.sideC)
+  }
+  area(){
+    var s = (this.sideA+this.sideB+this.sideC)/2;
+    return Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))
+  }
+
+  isObtuse(){
+    let sides = [this.sideA, this.sideB, this.sideC];
+    let longSide = Math.max(this.sideA, this.sideB, this.sideC);
+    sides.splice(sides.indexOf(longSide), 1);
+    if (longSide ** 2 > (sides[0] ** 2) + (sides[1] ** 2))
+      return true
+    else
+      return false
+  }
+}
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
@@ -21,6 +65,9 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+  }
+  length(){
+    return Math.sqrt(Math.pow((this.x1-this.x2),2)+(Math.pow((this.y1-this.y2),2)));
   }
 }
 
