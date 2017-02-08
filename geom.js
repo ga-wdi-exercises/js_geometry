@@ -31,6 +31,7 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+
   isEquilateral(){
     if(this.sideA == this.sideB && this.sideA == this.sideC && this.sideB == this.sideC){
       return true;
@@ -38,23 +39,25 @@ class Triangle {
       return false;
     }
   }
+
   isIsosceles(){
-    if(this.sideA == this.sideB || this.sideA == this.sideC || this.sideB == this.sideC){
-      return true;
-    } else {
-      return false;
-    }
+    return (this.sideA == this.sideB || this.sideA == this.sideC || this.sideB == this.sideC)
   }
   area(){
     var s = (this.sideA+this.sideB+this.sideC)/2;
     return Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC))
   }
-}
 
-isObtuse(){
-  
+  isObtuse(){
+    let sides = [this.sideA, this.sideB, this.sideC];
+    let longSide = Math.max(this.sideA, this.sideB, this.sideC);
+    sides.splice(sides.indexOf(longSide), 1);
+    if (longSide ** 2 > (sides[0] ** 2) + (sides[1] ** 2))
+      return true
+    else
+      return false
+  }
 }
-
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
