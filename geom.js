@@ -10,7 +10,7 @@ isSquare(){
       false
 },
 
- area: function(){
+area: function(){
    return this.length * this.width;
 },
 
