@@ -63,7 +63,7 @@ class LineSegment {
     this.y2 = y2;
   }
   length(){
-    var calculateLength = ((y2 - y1) * (y2 - y1)) + ((x2 - x1) * (x2 - x1)) * 2;
+    var calculateLength = ((y2 - y1) * (y2 - y1)) + ((x2 - x1) * (x2 - x1)) ** 2;
     return calculateLength;
   }
 }
