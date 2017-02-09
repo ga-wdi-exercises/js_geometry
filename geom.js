@@ -61,6 +61,11 @@ class Triangle {
       }
     }
   }
+
+  area(){
+    this.semiperimeter = (this.sideA+this.sideB+this.sideC)/2;
+    return Math.sqrt(this.semiperimeter*(this.semiperimeter-this.sideA)*(this.semiperimeter-this.sideB)*(this.semiperimeter-this.sideC))
+  }
 }
 
 let tri1 = new Triangle(2,3,4)
