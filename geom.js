@@ -4,16 +4,21 @@ class Rectangle {
     this.width = width;
   }
   isSquare(length, width){
-    if (length == width) {
-      console.log("true");
+    if (this.length == this.width) {
+      return "true";
     }
   }
   area(length, width){
-    console.log(length * width);
+    return (this.length * this.width);
+  }
+  perimeter(length, width){
+    return 2 * (this.length + this.width);
   }
 }
 
 let square = new Rectangle(10, 10)
+let square2 = new Rectangle(8, 25)
+let square3 = new Rectangle(9, 18)
 
 
 class Triangle {
