@@ -66,6 +66,13 @@ class Triangle {
     this.semiperimeter = (this.sideA+this.sideB+this.sideC)/2;
     return Math.sqrt(this.semiperimeter*(this.semiperimeter-this.sideA)*(this.semiperimeter-this.sideB)*(this.semiperimeter-this.sideC))
   }
+
+  /*obtuse(){
+    A triangle with one interior angle measuring more than 90° is an obtuse triangle or obtuse-angled triangle. If c is the length of the longest side, then a2 + b2 < c2, where a and b are the lengths of the other sides.
+
+  LAB: Sorry...ain't happening at 1 AM!  I'm going to bed.  zzzZZZZZzzzz
+  }*/
+
 }
 
 let tri1 = new Triangle(2,3,4)
