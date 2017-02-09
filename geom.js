@@ -3,7 +3,17 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare(length, width){
+    if (length == width) {
+      console.log("true");
+    }
+  }
+  area(length, width){
+    console.log(length * width);
+  }
 }
+
+let square = new Rectangle(10, 10)
 
 
 class Triangle {
