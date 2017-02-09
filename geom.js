@@ -34,7 +34,33 @@ class Triangle {
     this.sideC = sideC;
   }
 
+  isEquilateral(){
+    if (this.sideA == this.sideB) {
+      if (this.sideB == this.sideC) {
+        return "This is an equilateral triangle!"
+      } else {
+        return "This is not an equilateral triangle."
+      }
+    } else {
+      return "This is not an equilateral triangle."
+    }
+  }
+
+  isIsosceles(){
+    if (true) {
+      
+    } else {
+
+    }
+  }
 }
+
+let tri1 = new Triangle(2,3,4)
+let tri2 = new Triangle(2,2,2)
+let tri3 = new Triangle(10,5,10)
+
+
+
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
