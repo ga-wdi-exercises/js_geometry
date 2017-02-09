@@ -6,6 +6,8 @@ class Rectangle {
   isSquare(length, width){
     if (this.length == this.width) {
       return "true";
+    } else {
+      return "false";
     }
   }
   area(length, width){
@@ -27,7 +29,34 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+
+  isEquilateral(){
+    if (this.sideA == this.sideB && this.sideA == this.sideC) {
+      return "true";
+    } else {
+      return "false";
+    }
+  }
+
+  isIsosceles(){
+    if (this.sideA == this.sideB || this.sideA == this.sideC || this.sideB == this.sideC) {
+      return "true"
+    } else {
+      return "false"
+    }
+  }
+  area(){
+    let s = .5 * (this.sideA + this.sideB + this.sideC);
+    return Math.sqrt(s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC));
+  }
+
+  isObtuse(sideA, sideB, sideC){
+    return this.sideC * this.sideC > (this.sideB * this.sideB) + (this.sideA * this.sideA);
+  }
 }
+
+let triangle = new Triangle(10, 10, 10)
+let triangle2 = new Triangle(20, 10, 30)
 
 
 class LineSegment {
