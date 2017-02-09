@@ -3,17 +3,17 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-  isSquare(length, width){
+  isSquare(){
     if (this.length == this.width) {
       return "true";
     } else {
       return "false";
     }
   }
-  area(length, width){
+  areaOfRect(){
     return (this.length * this.width);
   }
-  perimeter(length, width){
+  perimeter(){
     return 2 * (this.length + this.width);
   }
 }
@@ -66,7 +66,14 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
+
+  length(){
+    return Math.pow((this.x2 - this.x1), 2) + Math.pow((this.y2 - this.y1), 2);
+  }
 }
+
+let line1 = new LineSegment(12, 13, 14, 15)
+let line2 = new LineSegment(20, 22, 24, 26)
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
