@@ -47,10 +47,18 @@ class Triangle {
   }
 
   isIsosceles(){
-    if (true) {
-      
+    if (this.sideA == this.sideB) {
+      return "This is an isosceles triangle!"
     } else {
-
+      if (this.sideA == this.sideC) {
+        return "This is an isosceles triangle!"
+      } else {
+        if (this.sideB == this.sideC) {
+          return "This is an isosceles triangle!"
+        } else {
+          return "This is not an isosceles triangle."
+        }
+      }
     }
   }
 }
