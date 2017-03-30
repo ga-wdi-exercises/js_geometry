@@ -3,6 +3,15 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare(){
+    return (this.length == this.width);
+  }
+  area(){
+    return (this.length * this.width);
+  }
+  perimeter() {
+    return (2*this.length + 2*this.width);
+  }
 }
 
 
