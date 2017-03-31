@@ -68,14 +68,27 @@ let triangle1 = new Triangle(3,5,7);
 let triangle2 = new Triangle(4,4,4);
 let triangle3 = new Triangle(6,6,9);
 
-// class LineSegment {
-//   constructor(x1, y1, x2, y2){
-//     this.x1 = x1;
-//     this.y1 = y1;
-//     this.x2 = x2;
-//     this.y2 = y2;
-//   }
-// }
+
+class LineSegment {
+  constructor(x1, y1, x2, y2){
+    this.x1 = x1;
+    this.y1 = y1;
+    this.x2 = x2;
+    this.y2 = y2;
+  }
+  findLength(x1, y1, x2, y2){
+    let length = Math.sqrt((Math.pow(segmentX,2)) + (Math.pow(segmentY,2)));
+
+    //OH MY GOD MATH//
+
+    var segmentX = Math.abs(x);
+    var segmentY = Math.abs(y);
+
+    var x = (this.x1 - this.x2);
+    var y = (this.y1 - this.y2);
+  }
+}
+let lineSeg1 = new LineSegment(4,6,2,8);
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
