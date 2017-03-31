@@ -5,13 +5,16 @@ class Rectangle {
   }
   isSquare(length,width){
     if (length === width) {
-      console.log('we have a square')
+      console.log('we have a square');
     } else {
-      console.log('rectangle')
+      console.log('rectangle');
     }
   }
   area(length,width){
     return length * width;
+  }
+  perimeter(length,width){
+    return (length * 2) + (width * 2);
   }
 }
 
