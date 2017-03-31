@@ -25,6 +25,11 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+  isEquilateral(sideA, sideB, sideC){
+    if (sideA === sideB && sideB === sideC) {
+      console.log('equilateral triangle')
+    }
+  }
 }
 
 
