@@ -18,7 +18,6 @@ class Rectangle {
   }
 }
 
-
 class Triangle {
   constructor(sideA, sideB, sideC){
     this.sideA = sideA;
@@ -47,9 +46,11 @@ class Triangle {
     var bSquared = Math.pow(sideB,2)
     var cSquared = Math.pow(sideC,2);
     if ((aSquared + bSquared) < cSquared){
-      console.log('obtuse triangle')
+      console.log('obtuse triangle');
     } else if((aSquared + bSquared) > cSquared) {
-      console.log('acute triangle')
+      console.log('acute triangle');
+    } else {
+      console.log('right triangle')
     }
   }
 }
@@ -61,6 +62,14 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+  }
+  length(){
+    var pointA = x1 - y1;
+    var pointB = y1 - y2;
+    var aSquared = Math.pow(pointA,2);
+    var bSquared = Math.pow(pointB,2);
+
+    return Math.pow(pointA * pointB);
   }
 }
 
