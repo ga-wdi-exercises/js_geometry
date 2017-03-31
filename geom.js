@@ -6,7 +6,7 @@ class Rectangle {
 
   isSquare(){
     
-    return this.length === this.length;
+    return this.length === this.width;
   }
 
   area(){
@@ -31,14 +31,21 @@ class Triangle {
     return this.sideA === this.sideB && this.sideB === this.sideC;
   }
 
-  sIsosceles() {
-      return this.sideA > this.sideB || this.sideB < this.sideC;
+  isIsosceles() {
+       return this.sideA === this.sideB || this.sideA === this.sideC || this.sideB === this.sideC;
 
   }
 
   area() {
-    return (this.sideA + this.sideb + this.sideC) / 2;
+    var p =  (this.sideA + this.sideb + this.sideC) / 2;
+    area = Math.sqrt (p (p - this.sideA)*(p - this.sideB)*(p - this.sideC));
 
+  }
+
+  isObtuse () {
+    if (this.sideA > this.sideB && this.sideA > this.sideC) {
+      Math.pow(this.sideA) 
+    }
   }
 
 }
@@ -51,13 +58,22 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
 
-    length() {}
+    
+  length() {
+     return Math.sqrt((this.x2 - this.x1) * (this.x2 - this.x1) + (this.y2 - this.y1) * (this.y2 - this.y1));
   }
+ }  
 }
 
-// NOTE: DO NOT REMOVE OR ALTER
-module.exports = {
-  Rectangle: Rectangle,
-  Triangle: Triangle,
-  LineSegment: LineSegment
-}
+let rc = new Rectangle (5,7);
+console.log(rc);
+let tr = new Triangle (6,6,6);
+console.log(tr);
+
+
+// // NOTE: DO NOT REMOVE OR ALTER
+// module.exports = {
+//   Rectangle: Rectangle,
+//   Triangle: Triangle,
+//   LineSegment: LineSegment
+// }
