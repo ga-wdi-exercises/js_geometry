@@ -35,7 +35,12 @@ class Triangle {
       console.log('isosceles triangle')
     }
   }
-  
+  area(sideA, sideB, sideC){
+  // find the perimeter
+    var p = (sideA + sideB + sideC)/2;
+  // use the perimeter to find the area
+    return Math.sqrt(p*(p - side1) * (p - side2)*(p - side3));
+  }
 }
 
 
