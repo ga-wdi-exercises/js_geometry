@@ -48,7 +48,7 @@ class Triangle {
   area() {
     let s = (this.sideA + this.sideB + this.sideC) / 2
     let area = Math.sqrt(s * ((s - this.sideA) * (s - this.sideB) * (s - this.sideC)));
-    console.log(`Triangle ${area}`)
+    console.log(`Triangle Area: ${area}`)
     return area;
   }
   isObtuse() {
