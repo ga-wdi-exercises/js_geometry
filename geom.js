@@ -41,6 +41,17 @@ class Triangle {
   // use the perimeter to find the area
     return Math.sqrt(p*(p - side1) * (p - side2)*(p - side3));
   }
+  obtuse(sideA, sideB, sideC) {
+    // Pythagorean theorem
+    var aSquared = Math.pow(sideA,2);
+    var bSquared = Math.pow(sideB,2)
+    var cSquared = Math.pow(sideC,2);
+    if ((aSquared + bSquared) < cSquared){
+      console.log('obtuse triangle')
+    } else if((aSquared + bSquared) > cSquared) {
+      console.log('acute triangle')
+    }
+  }
 }
 
 
