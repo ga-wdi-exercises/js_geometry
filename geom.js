@@ -3,7 +3,15 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-}
+  
+Rectangle.prototype = {
+  this.length == this.width;
+
+    }
+  }
+
+
+
 
 
 class Triangle {
