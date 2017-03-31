@@ -80,6 +80,7 @@ class LineSegment {
     this.y2 = y2;
   }
 
+  //working
   length() {
     console.log(this.x1 + this.y1);
     console.log(this.x2 + this.y2);
