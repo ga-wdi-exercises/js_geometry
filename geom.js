@@ -6,7 +6,12 @@ class Rectangle {
   isSquare(length,width){
     if (length === width) {
       console.log('we have a square')
+    } else {
+      console.log('rectangle')
     }
+  }
+  area(length,width){
+    return length * width;
   }
 }
 
