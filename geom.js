@@ -24,15 +24,50 @@ let rectangle1 = new Rectangle(6,6);
 let rectangle2 = new Rectangle(12,3);
 
 
-// class Triangle {
-//   constructor(sideA, sideB, sideC){
-//     this.sideA = sideA;
-//     this.sideB = sideB;
-//     this.sideC = sideC;
-//   }
-// }
-//
-//
+class Triangle {
+  constructor(sideA, sideB, sideC){
+    this.sideA = sideA;
+    this.sideB = sideB;
+    this.sideC = sideC;
+  }
+
+  isEquilateral(sideA, sideB, sideC){
+    if(this.sideA = (this.sideB && this.sideC)){
+      return true;
+    }else {
+      return false;
+    }
+  }
+  isIsosceles(sideA, sideB, sideC){
+    if(this.sideA = (this.sideB && this.sideC)){
+      return false;
+    }else if ((this.sideA != (this.sideB || this.sideC)) && (this.sideB != (this.sideA || this.sideC)){
+      return false;
+    }else if ((this.sideA = this.sideB ) && (this.sideA != this.sideC)){
+      return true;
+    }
+  }
+  findArea(sideA, sideB, sideC){
+    let area = Math.sqrt(root);
+
+      let square = ((this.sideA + this.sideB + this.sideC) / 2);
+      let root = (square * ((square - this.sideA) * (square - this.sideB) * (square - this.sideC)));
+  }
+  isObtuse(sideA, sideB, sideC){
+    if((a + b) < c){
+      return true;
+    }else {
+      return false;
+    }
+    let a = Math.pow(this.sideA, 2);
+    let b = Math.pow(this.sideB, 2);
+    let c = Math.pow(this.sideC, 2);
+  }
+}
+let triangle1 = new Triangle(3,5,7);
+let triangle2 = new Triangle(4,4,4);
+let triangle3 = new Triangle(6,6,9);
+
 // class LineSegment {
 //   constructor(x1, y1, x2, y2){
 //     this.x1 = x1;
