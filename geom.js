@@ -30,6 +30,12 @@ class Triangle {
       console.log('equilateral triangle')
     }
   }
+  isIsosceles(sideA, sideB, sideC){
+    if (sideA === sideB || sideB === sideC || sideA === sideC) {
+      console.log('isosceles triangle')
+    }
+  }
+  
 }
 
 
