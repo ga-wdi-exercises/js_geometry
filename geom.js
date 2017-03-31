@@ -4,19 +4,24 @@ class Rectangle {
     this.width = width;
   }
   isSquare(length,width){
-    if (this.length = this.width){
+    if (this.length != this.width){
+      return false;
+    } else if (this.length = this.width){
       return true;
     }
   }
-}
-findArea(length, width){
-  area = this.length * this.width;
+
+  findArea(length, width){
+  let area = this.length * this.width;
   return area;
-}
-findPerimeter(length, width){
-  perimeter = 2*(this.length + this.width);
+  }
+  findPerimeter(length, width){
+  let perimeter = 2*(this.length + this.width);
   return perimeter;
+  }
 }
+let rectangle1 = new Rectangle(6,6);
+let rectangle2 = new Rectangle(12,3);
 
 
 // class Triangle {
