@@ -4,17 +4,17 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-  isSquare(length, width){
+  isSquare(){
     if (this.length === this.width) {
       return 'Yes'
     } else {
       return 'No'
     }
   }
-  area(length, width){
+  area(){
     return this.length * this.width;
   }
-  perimeter(length, width){
+  perimeter(){
     return (this.length * 2) + (this.width * 2);
   }
 }
@@ -22,54 +22,50 @@ class Rectangle {
 console.log('----RECTANGLES----')
 var square = new Rectangle(10,10);
 console.log(`Is it a square?: ${square.isSquare()}`);
-console.log(`Area: ${square.isSquare()}`);
+console.log(`Area: ${square.area()}`);
 console.log(`Perimeter: ${square.perimeter()}`);
 
 var rectangle = new Rectangle(50,15);
 console.log(`Is it a square?: ${rectangle.isSquare()}`);
-console.log(`Area: ${rectangle.isSquare()}`);
+console.log(`Area: ${rectangle.area()}`);
 console.log(`Perimeter: ${rectangle.perimeter()}`);
 
 var spongebob = new Rectangle(12,10);
-console.log(`Is Spongebob a square? ${rectangle.isSquare()}`);
-console.log(`Area: ${rectangle.area()}`);
-console.log(`Perimeter: ${rectangle.perimeter()}`);
+console.log(`Is Spongebob a square? ${spongebob.isSquare()}`);
+console.log(`Area: ${spongebob.area()}`);
+console.log(`Perimeter: ${spongebob.perimeter()}`);
 
 // TRIANGLE CLASS
 class Triangle {
   constructor(sideA, sideB, sideC){
-    this.sideA = this.sideA;
-    this.sideB = this.sideB;
-    this.sideC = this.sideC;
+    this.sideA = sideA;
+    this.sideB = sideB;
+    this.sideC = sideC;
   }
-  isEquilateral(sideA, sideB, sideC){
+  isEquilateral(){
     if (this.sideA === this.sideB && this.sideB === this.sideC) {
       return 'Yes'
     } else {
       return 'No'
     }
   }
-  isIsosceles(sideA, sideB, sideC){
+  isIsosceles(){
     if (this.sideA === this.sideB || this.sideB === this.sideC || this.sideA === this.sideC) {
       return 'Yes'
     } else {
       return 'No'
     }
   }
-  area(sideA, sideB, sideC){
+  area(){
   // find the perimeter
     var p = (this.sideA + this.sideB + this.sideC)/2;
   // use the perimeter to find the area
     return Math.sqrt(p * (p - this.sideA) * (p - this.sideB) * (p - this.sideC));
   }
-  obtuse(sideA, sideB, sideC) {
-    // Pythagorean theorem
-    var aSquared = Math.pow(this.sideA,2);
-    var bSquared = Math.pow(this.sideB,2);
-    var cSquared = Math.pow(this.sideC,2);
-    if ((aSquared + bSquared) < cSquared){
+  isObtuse() {
+    if ((this.sideA * this.sideA) + (this.sideB * this.sideB) < (this.sideC * this.sideC)){
       return 'Yes';
-    } else if((aSquared + bSquared) > cSquared) {
+    } else {
       return 'No';
     }
   }
@@ -77,17 +73,17 @@ class Triangle {
 
 //TRIANGLES
 console.log('----TRIANGLES----')
-var equilateral = new Triangle(10,10,10);
+var equilateral = new Triangle(40,40,40);
 console.log(`Is this an equilateral triangle?: ${equilateral.isEquilateral()}`);
 console.log(`Is this an isosceles triangle?: ${equilateral.isIsosceles()}`);
 console.log(`Area: ${equilateral.area()}`);
-console.log(`Obtuse?: ${equilateral.obtuse()}`);
+console.log(`Obtuse?: ${equilateral.isObtuse()}`);
 
-var acute = new Triangle(40,12,10);
-console.log(`Is this an equilateral triangle?: ${acute.isEquilateral()}`);
-console.log(`Is this an isosceles triangle?: ${acute.isIsosceles()}`);
-console.log(`Area: ${acute.area()}`);
-console.log(`Obtuse?: ${acute.obtuse()}`);
+var obtuse = new Triangle(40,76,86);
+console.log(`Is this an equilateral triangle?: ${obtuse.isEquilateral()}`);
+console.log(`Is this an isosceles triangle?: ${obtuse.isIsosceles()}`);
+console.log(`Area: ${obtuse.area()}`);
+console.log(`Obtuse?: ${obtuse.isObtuse()}`);
 
 // LINE SEGMENT CLASS
 class LineSegment {
@@ -101,9 +97,7 @@ class LineSegment {
     var pointA = this.x1 - this.y1;
     var pointB = this.y1 - this.y2;
     // Pythagorean theorem
-    var aSquared = Math.pow(pointA,2);
-    var bSquared = Math.pow(pointB,2);
-    return Math.pow(pointA * pointB);
+    return (pointA * pointA) + (pointB * pointB);
   }
 }
 
