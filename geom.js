@@ -46,18 +46,15 @@ class Triangle {
   }
 
   isObtuse(){
-    if (Math.pow(this.sideA,2) + Math.pow(this.sideB,2) > Math.pow(this.sideC,2) \
-      || Math.pow(this.sideA,2) + Math.pow(this.sideC,2) > Math.pow(this.sideB,2) \
-      || Math.pow(this.sideB,2) + Math.pow(this.sideC,2) > Math.pow(this.sideA,2)) {
-        return true
+    if ((Math.pow(this.sideA,2) + Math.pow(this.sideB,2)) < Math.pow(this.sideC,2) || (Math.pow(this.sideA,2) + Math.pow(this.sideC,2)) < Math.pow(this.sideB,2) || (Math.pow(this.sideB,2) + Math.pow(this.sideC,2)) < Math.pow(this.sideA,2)) {
+      return true
     }else {
       return false
     }
   }
 
   area(){
-    return .25 * (Math.sqrt((Math.pow((Math.pow(this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)),2))\
-          - (2 *(Math.pow(this.sideA,4) + Math.pow(this.sideB,4) + Math.pow(this.sideC,4)))))
+    return .25 * (Math.sqrt((Math.pow((Math.pow(this.sideA,2) + Math.pow(this.sideB,2) + Math.pow(this.sideC,2)),2)) - (2 *(Math.pow(this.sideA,4) + Math.pow(this.sideB,4) + Math.pow(this.sideC,4)))))
   }
 
 }
@@ -77,7 +74,7 @@ class LineSegment {
 }
 
 var line = new LineSegment(0,0,5,0)
-var triangle = new Triangle(5,6,7)
+var triangle = new Triangle(3,4,4.5)
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
