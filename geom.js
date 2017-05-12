@@ -36,6 +36,7 @@ class Triangle {
     return this.sideA === this.sideB || this.sideB === this.sideC || this.sideA === this.sideC
   }
 
+//Don't think i did this right...
   area(height, base){
     return (height * base) / 2
   }
