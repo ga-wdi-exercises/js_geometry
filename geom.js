@@ -3,8 +3,32 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+
+  isSquare () {
+    if (this.length === this.width)
+    return true
+  }
+  //   if else {
+  //   return false
+  // }
+
+  area () {
+    return this.length * this.width;
+  }
+
+  perimeter() {
+    // !!!!!
+    return 2 * (this.length + this.width)
+
+  }
 }
 
+const myRectangle = new Rectangle(90, 90)
+let mySecondRectangle = new Rectangle(30, 60)
+
+
+
+// TRIANGLE CLASS
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -12,7 +36,31 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+
+  isEquilateral() {
+    if (this.sideA === this.sideB && this.sideB === this.sideC)
+    return true
+  }
+
+  isIsosceles() {
+
+
+  }
+
+  area() {
+    return this.sideA * this.sideB * this.sideC
+  }
+
+  isObtuse() {
+
+  }
+
+
 }
+
+const myTriangle = new Triangle()
+
+
 
 
 class LineSegment {
@@ -24,7 +72,7 @@ class LineSegment {
   }
 }
 
-// NOTE: DO NOT REMOVE OR ALTER
+NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
   Rectangle: Rectangle,
   Triangle: Triangle,
