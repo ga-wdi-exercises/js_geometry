@@ -74,7 +74,7 @@ class LineSegment {
 }
 
 var line = new LineSegment(0,0,5,0)
-var triangle = new Triangle(3,4,4.5)
+var triangle = new Triangle(3,4,5)
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
