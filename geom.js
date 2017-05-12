@@ -3,6 +3,11 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare(){
+    if (length === width return true)
+  }else(return false)
+  }
+
 }
 
 
