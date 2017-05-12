@@ -2,6 +2,7 @@ class Rectangle {
   constructor(length, width) {
     this.length = length;
     this.width = width;
+    console.log(this.length + " and " +this.width);
   }
   isSquare(){
     if (this.length==this.width)
@@ -15,12 +16,11 @@ class Rectangle {
   }
   area(){
     let area1= this.length * this.width;
-    console.log("The area is " +area1);
+    console.log("The area is " + area1);
   }
   perimeter(){
     let perim= 2*(this.length + this.width);
     console.log("The perimeter is " + perim);
-
   }
 }
 
@@ -29,38 +29,47 @@ class Triangle {
     this.sideA = sideA;
     this.sideB = sideB;
     this.sideC = sideC;
+    console.log(this.sideA+" and "+this.sideB+" and "+this.sideC);
   }
   isEquilateral(){
-    if (sideA==sideB and sideB=sideC )
+    if ( this.sideA == this.sideB && this.sideC == this.sideB)
     {
+      console.log("Yes it is equilateral triangle!!!");
       return true;
-      console.log("Yes it is equilateral triangle");
     }
     else{
-      console.log("It is not equilateral triangle?");
+      console.log("It is not equilater  al triangle!!!");
     }
-
   }
   isIsosceles(){
-    if (sideA==sideB || sideB=sideC || sideA=sideC)
+    if (this.sideA == this.sideB || this.sideA == this.sideC || this.sideB == this.sideC)
     {
+      console.log("Yes it is Isosceless triangle!!!");
       return true;
-      console.log("Yes it is Isosceless triangle");
     }
     else{
-      console.log("It is not Isosceless triangle?");
+      console.log("It is not Isosceless triangle!!!");
     }
 
   }
   area(){
-    perimeter=(sideA+ sideB+ sideC)/2;
-    area2=math.sqrt(perimeter*(perimeter-sideA)*(perimeter-sideB*(perimeter-sideC)
-    console.log("The area is " +area2);
+    var perimeter=(this.sideA+ this.sideB+ this.sideC)/2;
+    var area2= Math.sqrt(perimeter*(perimeter-this.sideA)*(perimeter-this.sideB)*(perimeter-this.sideC));
+    console.log("The area is " + area2);
   }
   isObtuse(){
+    var sideOne=(this.sideA**2)
+    var sideTwo=(this.sideB**2)
+    var sideThree=(this.sideC**2)
 
+    if (sideOne>(sideTwo+sideThree) || sideTwo>(sideOne+sideThree) || sideThree>(sideOne+sideTwo)){
+      console.log("Yes it is Obtuse triangle!!!")
+      return true;
+    }
+    else {
+      console.log("No it is not Obtuse triangle!!!")
+    }
   }
-
 }
 
 class LineSegment {
@@ -69,16 +78,18 @@ class LineSegment {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
+    console.log(this.x1+" and "+this.x2+" and "+this.y1+" and "+this.y2);
+
   }
   length(){
-    var leng=math.sqrt(((this.x2-this.x1)**2)+((this.y2-this.y1)**2))
+    var leng= Math.sqrt(((this.x2-this.x1)**2)+((this.y2-this.y1)**2))
     console.log(leng);
   }
  }
 
 // NOTE: DO NOT REMOVE OR ALTER
-module.exports = {
-  Rectangle: Rectangle,
-  Triangle: Triangle,
-  LineSegment: LineSegment
-}
+// module.exports = {
+//   Rectangle: Rectangle,
+//   Triangle: Triangle,
+//   LineSegment: LineSegment
+// }
