@@ -3,9 +3,20 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-}
+  }
 
-
+  const isSquare = function () {
+    if (this.length == this.width)
+      alert("true")
+  } else {
+      alert("false")
+    }
+      const area = function () {
+          alert(this.length * this.width)
+    }
+       const perimeter(){
+          alert(2 * this.length + this.width)
+        }
 class Triangle {
   constructor(sideA, sideB, sideC){
     this.sideA = sideA;
