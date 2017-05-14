@@ -20,7 +20,7 @@ class Rectangle {
   perimeter() {
     return 2 * (this.length + this.width);
   }
-};
+}
 
 class Triangle {
   constructor(sideA, sideB, sideC){
@@ -57,7 +57,7 @@ class Triangle {
       return false;
     }
   }
-};
+}
 
 class LineSegment {
   constructor(x1, y1, x2, y2){
@@ -69,7 +69,7 @@ class LineSegment {
 length() {
   return (Math.sqrt((Math.pow((this.y2 - this.y1), 2)) + (Math.pow((this.x2 - this.x1), 2))));
 }
-};
+}
 
 
 // NOTE: DO NOT REMOVE OR ALTER
