@@ -69,7 +69,7 @@ class LineSegment {
     this.y2 = y2
   }
   length() {
-    return (Math.sqrt((abs(x2 - x1)**2) + (abs(y2 - y1))**2) 
+    return (Math.sqrt((abs(this.x2 - this.x1)**2) + (abs(this.y2 - this.y1))**2) 
   }
 }
 
