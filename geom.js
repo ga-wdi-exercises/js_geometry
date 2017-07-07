@@ -77,8 +77,9 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
-
+//LineSegment
   length () {
+  const line = new LineSegment(3,4,6,20)
     //calculates the length of the (x1, y1) --> (x2, y2)
     let xdiff = Math.abs(this.x1 - this.x2)
     //The Math.abs() function returns the absolute value of a number
