@@ -50,7 +50,13 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
+  length() {
+    return (((this.x2 - this.x1) ** 2) + ((this.y2 - this.y1) ** 2)) ** 0.5
+  }
 }
+
+// length` – calculates the length of the (x1, y1) --> (x2, y2)
+// [line segment](http://en.wikipedia.org/wiki/Pythagorean_theorem).
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
