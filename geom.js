@@ -3,14 +3,42 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+  isSquare () {
+    return this.length === this.width
+  }
+  area () {
+    return this.length * this.width
+  }
+  perimeter () {
+    return (this.length + this.width) * 2
+  }
 }
-
 
 class Triangle {
   constructor(sideA, sideB, sideC){
     this.sideA = sideA;
     this.sideB = sideB;
     this.sideC = sideC;
+  }
+  isEquilateral () {
+    return this.sideA === this.sideB === this.sideC
+  }
+  isIsosceles () {
+    return this.sideA === this.sideB || this.sideB === this.sideC || this.sideC === this.sideA
+  }
+  area () {
+    // Use Heron's fomula
+    let a = this.sideA
+    let b = this.sideB
+    let c = this.sideC
+    let s = (a + b + c) / 2
+    return (s * (s - a) * (s - b) * (s - c)) ** (1 / 2)
+  }
+  isObtuse () {
+    let a = this.sideA
+    let b = this.sideB
+    let c = this.sideC
+    return (a ** 2) + (b ** 2) < (c ** 2)
   }
 }
 
