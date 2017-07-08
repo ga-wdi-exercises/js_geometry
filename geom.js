@@ -1,7 +1,7 @@
 class Rectangle {
-  constructor(length, width) {
-    this.length = length;
-    this.width = width;
+  constructor (length, width) {
+    this.length = length
+    this.width = width
   }
   isSquare () {
     return this.length === this.width
@@ -15,10 +15,10 @@ class Rectangle {
 }
 
 class Triangle {
-  constructor(sideA, sideB, sideC){
-    this.sideA = sideA;
-    this.sideB = sideB;
-    this.sideC = sideC;
+  constructor (sideA, sideB, sideC) {
+    this.sideA = sideA
+    this.sideB = sideB
+    this.sideC = sideC
   }
   isEquilateral () {
     return this.sideA === this.sideB === this.sideC
@@ -27,36 +27,27 @@ class Triangle {
     return this.sideA === this.sideB || this.sideB === this.sideC || this.sideC === this.sideA
   }
   area () {
-    // Use Heron's fomula
-    let a = this.sideA
-    let b = this.sideB
-    let c = this.sideC
-    let s = (a + b + c) / 2
-    return (s * (s - a) * (s - b) * (s - c)) ** (1 / 2)
+    // Heron's Fomula
+    let s = (this.sideA + this.sideB + this.sideC) / 2
+    return (s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC)) ** 0.5
   }
   isObtuse () {
-    let a = this.sideA
-    let b = this.sideB
-    let c = this.sideC
-    return (a ** 2) + (b ** 2) < (c ** 2)
+    return (this.sideA ** 2) + (this.sideB ** 2) < (this.sideC ** 2)
   }
 }
 
 
 class LineSegment {
-  constructor(x1, y1, x2, y2){
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
+  constructor (x1, y1, x2, y2) {
+    this.x1 = x1
+    this.y1 = y1
+    this.x2 = x2
+    this.y2 = y2
   }
-  length() {
+  length () {
     return (((this.x2 - this.x1) ** 2) + ((this.y2 - this.y1) ** 2)) ** 0.5
   }
 }
-
-// length` – calculates the length of the (x1, y1) --> (x2, y2)
-// [line segment](http://en.wikipedia.org/wiki/Pythagorean_theorem).
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
