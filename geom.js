@@ -3,7 +3,19 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-}
+  isSquare() {
+      if (this.length === this.width) {
+        return true
+      }
+    }
+    area() {
+      return this.length * this.width
+    }
+    perimeter() {
+      return (this.length * 2) + (this.width * 2)
+    }
+  }
+
 
 
 class Triangle {
@@ -12,6 +24,27 @@ class Triangle {
     this.sideB = sideB;
     this.sideC = sideC;
   }
+  isEquilateral(){
+    if (this.sideA === this.sideB === this.sideC){
+      return true
+    }
+  }
+  isIsosceles(){
+    if (this.sideA === this.sideB || this.sideA === this.sideC || this.sideB === this.sideC) {
+      return true
+    }
+  }
+  area(){
+    var s = (this.sideA + this.sideB + this.sideC)/2
+    var area = Math.sqrt(s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC))
+    return area
+  }
+
+  isObtuse(){
+  if (this.sideA !== this.sideB && this.sideA !== C && this.sideB !== this.sideC) {
+    return true
+  }
+}
 }
 
 
@@ -22,7 +55,12 @@ class LineSegment {
     this.x2 = x2;
     this.y2 = y2;
   }
+  length(x1, y1, x2, y2){
+    Math.sqrt((Math.square(x1 - x2)) + ((Math.square(y1 - y2))))
+  }
 }
+
+
 
 // NOTE: DO NOT REMOVE OR ALTER
 module.exports = {
