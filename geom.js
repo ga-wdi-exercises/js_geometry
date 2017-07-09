@@ -6,8 +6,9 @@ class Rectangle {
   isSquare () {
     if (this.length === this.width){
       return true
+    } else {
+      return false
     }
-    else return false
   }
   area () {
     return this.length * this.width
@@ -27,14 +28,16 @@ class Triangle {
   isEquilateral () {
     if (this.sideA === this.sideB === this.sideC){
       return true
+    } else {
+      return false
     }
-    else return false
   }
   isIsosceles () {
     if (this.sideA === this.sideB || this.sideA === this.sideC || this.sideB === this.sideC){
       return true
+    } else {
+      return false
     }
-    else return false
   }
   area () {
     return (1/4 * Math.sqrt((this.sideA + this.sideB + this.sideC) * (-this.sideA + this.sideB + this.sideC) * (this.sideA - this.sideB + this.sideC) * (this.sideA + this.sideB - this.sideC)))
@@ -45,10 +48,10 @@ class Triangle {
     let angle2 = (Math.acos(((this.sideA * this.sideA) + (this.sideC * this.sideC) - (this.sideB * this.sideB)) / (2 * this.sideA * this.sideC))) * 57.2958 //radians to degrees conversion
     let angle3 = 180 - angle1 - angle2
     if (angle1 > 90 || angle2 > 90 || angle3 > 90) {
-      return 'true'
+      return true
     }
     else {
-      return 'false'
+      return false
     }
   }
 }
