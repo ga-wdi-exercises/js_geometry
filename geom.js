@@ -41,6 +41,7 @@ class Triangle {
   area () {
     var s = (this.sideA + this.sideB + this.sideC) / 2
     return Math.sqrt(s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC))
+    // return (Math.sqrt(this.sideA + this.sideB + this.sideC) * (this.sideB + this.sideC - this.sideA) * (this.sideA + this.sideB - this.sideC) * (this.sideC + this.sideA - this.sideB) / 4)
   }
   isObtuse () {
     function sortSides (a, b) {
@@ -48,7 +49,7 @@ class Triangle {
     }
     var sideArray = [this.sideA, this.sideB, this.sideC]
     sideArray.sort(sortSides)
-    if (Math.pow(sideArray[0]) + Math.pow(sideArray[1]) < Math.pow(sideArray[2])) {
+    if (Math.pow(sideArray[0], 2) + Math.pow(sideArray[1], 2) < Math.pow(sideArray[2], 2)) {
       return true
     } else {
       return false
@@ -62,6 +63,15 @@ class LineSegment {
     this.y1 = y1
     this.x2 = x2
     this.y2 = y2
+  }
+  length () {
+    var xl = this.x2 - this.x1
+    xl *= xl
+
+    var yl = this.y2 - this.y1
+    yl *= yl
+
+    return Math.sqrt(xl + yl)
   }
 }
 
